@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Openings & Requirements - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Manage corporate job openings, package compensation, and candidate eligibility criteria.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Placement Drive Job Postings & Eligibility Criteria</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item active">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Active Drives: <strong>28 Openings</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Campus Placement Job Requirements</h1>
+            <p>Active corporate job vacancies with minimum percentage, backlogs, qualification, and technology cutoffs</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="job-form.html" class="btn btn-primary">
+            <span>➕</span>
+            <span>Post New Job Requirement</span>
+          </a>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Job Openings</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Job Summary Stats -->
+        <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Active Job Openings</div>
+              <div class="stat-value">28</div>
+              <div class="stat-trend up">&bull; Open for Application</div>
+            </div>
+            <div class="stat-icon icon-blue">💼</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Total Student Vacancies</div>
+              <div class="stat-value">145</div>
+              <div class="stat-trend up">&uarr; +30 this week</div>
+            </div>
+            <div class="stat-icon icon-teal">🎯</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Average CTC Package</div>
+              <div class="stat-value">5.2 LPA</div>
+              <div class="stat-trend up">Highest: 8.5 LPA</div>
+            </div>
+            <div class="stat-icon icon-green">💰</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Upcoming Deadlines</div>
+              <div class="stat-value">4 Drives</div>
+              <div class="stat-trend neutral">Expiring within 7 days</div>
+            </div>
+            <div class="stat-icon icon-amber">⏳</div>
+          </div>
+        </div>
+
+        <!-- Filter Panel -->
+        <div class="filter-panel">
+          <form onsubmit="event.preventDefault(); alert('Job filter executed.');">
+            <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+              
+              <div class="form-group">
+                <label for="jobCode">Job Code</label>
+                <input type="text" id="jobCode" class="form-control" placeholder="e.g. JOB-2026-001">
+              </div>
+
+              <div class="form-group">
+                <label for="compFilter">Company</label>
+                <select id="compFilter" class="form-control">
+                  <option value="">All Companies</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="TCS">TCS</option>
+                  <option value="Wipro">Wipro</option>
+                  <option value="Capgemini">Capgemini</option>
+                  <option value="Persistent">Persistent Systems</option>
+                  <option value="Cognizant">Cognizant</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="techFilter">Required Technology</label>
+                <select id="techFilter" class="form-control">
+                  <option value="">All Technologies</option>
+                  <option value="Java">Java</option>
+                  <option value="Python">Python</option>
+                  <option value="Testing">Software Testing</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="locFilter">Job Location</label>
+                <input type="text" id="locFilter" class="form-control" placeholder="Pune / Bengaluru / etc.">
+              </div>
+
+              <div class="form-group">
+                <label for="statusFilter">Status</label>
+                <select id="statusFilter" class="form-control">
+                  <option value="">All Statuses</option>
+                  <option value="OPEN" selected>OPEN (Accepting Applications)</option>
+                  <option value="DRAFT">DRAFT</option>
+                  <option value="CLOSED">CLOSED</option>
+                </select>
+              </div>
+
+              <div class="filter-actions">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                  <span>🔍</span>
+                  <span>Search</span>
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                  <span>Reset</span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Jobs Listing Table -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Active Campus Placement Drives</h2>
+              <p class="card-subtitle">Job profiles with explicit criteria validated by the automated eligibility engine</p>
+            </div>
+            <a href="job-form.html" class="btn btn-primary btn-sm">➕ Post New Job</a>
+          </div>
+
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Job Code</th>
+                    <th>Position & Employer</th>
+                    <th>Package CTC</th>
+                    <th>Cutoff & Eligibility Criteria</th>
+                    <th>Openings</th>
+                    <th>Location</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th style="text-align: right;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-001</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Associate Java Developer</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Infosys Limited &bull; Full-time</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #15803d;">4.5 - 6.0 LPA</div>
+                      <div style="font-size: 0.7rem; color: #64748b;">+ Retention Bonus</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;"><strong>Min 60.0% &bull; 0 Backlogs</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">BE, BTech, MCA &bull; Batch 2024-2026 &bull; Java</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 700;">15 Vacancies</span>
+                    </td>
+                    <td>Pune, Maharashtra</td>
+                    <td>
+                      <div style="font-size: 0.8rem; font-weight: 600; color: #b45309;">15-Nov-2026</div>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">Posted 20-Oct</div>
+                    </td>
+                    <td><span class="badge badge-open">OPEN</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-primary btn-sm" title="View candidates applied">Applications (12)</a>
+                        <a href="job-form.html" class="btn btn-secondary btn-sm" title="Edit requirements">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-002</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Software Engineer - Python & Full Stack</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Tata Consultancy Services (TCS) &bull; Full-time</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #15803d;">4.0 - 5.5 LPA</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;"><strong>Min 65.0% &bull; 0 Backlogs</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">BE, BTech, MCA &bull; Batch 2025 &bull; Python</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 700;">20 Vacancies</span>
+                    </td>
+                    <td>Pune / Mumbai</td>
+                    <td>
+                      <div style="font-size: 0.8rem; font-weight: 600; color: #b45309;">20-Nov-2026</div>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">Posted 22-Oct</div>
+                    </td>
+                    <td><span class="badge badge-open">OPEN</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-primary btn-sm">Applications (18)</a>
+                        <a href="job-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-003</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Project Engineer - QA & Testing</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Wipro Limited &bull; Full-time</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #15803d;">3.8 - 4.5 LPA</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;"><strong>Min 60.0% &bull; Max 1 Backlog</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">BE, BTech, MCA, BSc CS &bull; Batch 2024-2025</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 700;">12 Vacancies</span>
+                    </td>
+                    <td>Bengaluru, Karnataka</td>
+                    <td>
+                      <div style="font-size: 0.8rem; font-weight: 600; color: #b45309;">25-Nov-2026</div>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">Posted 24-Oct</div>
+                    </td>
+                    <td><span class="badge badge-open">OPEN</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-primary btn-sm">Applications (8)</a>
+                        <a href="job-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-004</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Junior Cloud & Java Trainee</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Capgemini Technology Services &bull; Full-time</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #15803d;">4.25 - 5.0 LPA</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;"><strong>Min 60.0% &bull; 0 Backlogs</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">BE, BTech, MCA &bull; Batch 2025 &bull; Java</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 700;">25 Vacancies</span>
+                    </td>
+                    <td>Pune, Maharashtra</td>
+                    <td>
+                      <div style="font-size: 0.8rem; font-weight: 600; color: #b45309;">18-Nov-2026</div>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">Posted 21-Oct</div>
+                    </td>
+                    <td><span class="badge badge-open">OPEN</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-primary btn-sm">Applications (15)</a>
+                        <a href="job-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-005</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Data Analyst & BI Specialist</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Persistent Systems &bull; Full-time</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #15803d;">5.0 - 7.0 LPA</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;"><strong>Min 65.0% &bull; 0 Backlogs</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">BE, BTech, MCA, BCA &bull; Batch 2024-2025 &bull; Analytics</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 700;">10 Vacancies</span>
+                    </td>
+                    <td>Pune, Maharashtra</td>
+                    <td>
+                      <div style="font-size: 0.8rem; font-weight: 600; color: #b45309;">12-Nov-2026</div>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">Posted 18-Oct</div>
+                    </td>
+                    <td><span class="badge badge-open">OPEN</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-primary btn-sm">Applications (9)</a>
+                        <a href="job-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-006</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Programmer Analyst Trainee (Python/AI)</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Cognizant &bull; Full-time</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #15803d;">4.5 - 6.5 LPA</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;"><strong>Min 70.0% &bull; 0 Backlogs</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">BE, BTech &bull; Batch 2025-2026 &bull; Python</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #e0f2fe; color: #0284c7; font-weight: 700;">18 Vacancies</span>
+                    </td>
+                    <td>Hyderabad, Telangana</td>
+                    <td>
+                      <div style="font-size: 0.8rem; font-weight: 600; color: #b45309;">30-Nov-2026</div>
+                      <div style="font-size: 0.7rem; color: #94a3b8;">Posted 26-Oct</div>
+                    </td>
+                    <td><span class="badge badge-open">OPEN</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-primary btn-sm">Applications (14)</a>
+                        <a href="job-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">JOB-2026-007</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #475569; font-size: 0.95rem;">Junior Automation Engineer</div>
+                      <div style="font-size: 0.78rem; color: #64748b;">Tech Mahindra &bull; Completed Drive</div>
+                    </td>
+                    <td>
+                      <div style="font-weight: 700; color: #475569;">3.5 - 4.2 LPA</div>
+                    </td>
+                    <td>
+                      <div style="font-size: 0.82rem;">Min 55.0% &bull; Max 2 Backlogs</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Any Graduate &bull; Batch 2024</div>
+                    </td>
+                    <td>
+                      <span class="badge" style="background: #f1f5f9; color: #64748b;">15 Filled</span>
+                    </td>
+                    <td>Pune, Maharashtra</td>
+                    <td>
+                      <div style="font-size: 0.8rem; color: #94a3b8;">Expired 15-Oct-2026</div>
+                    </td>
+                    <td><span class="badge badge-closed">CLOSED</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="applications.html" class="btn btn-secondary btn-sm">Drive History</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span style="font-size: 0.82rem; color: #64748b;">Showing 7 of 28 campus recruitment requirements</span>
+            <div class="pagination">
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">&raquo;</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

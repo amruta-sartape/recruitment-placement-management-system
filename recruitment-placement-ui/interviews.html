@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interviews & Round Scheduling - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Manage interview rounds, candidate schedules, panel assignments, and interview outcomes.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Campus Drive Interview Coordination & Schedule Management</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item active">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Schedule Engine: <strong>Active</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Interview Coordination & Scheduling</h1>
+            <p>Schedule corporate evaluation rounds, manage panel interviewers, and record attendance</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn btn-primary" onclick="document.getElementById('scheduleModal').classList.add('show')">
+            <span>➕ Schedule New Interview</span>
+          </button>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Interviews</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Today's Schedule Overview Cards -->
+        <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Scheduled Today</div>
+              <div class="stat-value">14</div>
+              <div class="stat-trend neutral">4 Technical, 10 Aptitude</div>
+            </div>
+            <div class="stat-icon icon-blue">📅</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Completed Today</div>
+              <div class="stat-value">6</div>
+              <div class="stat-trend up">&check; Feedback recorded</div>
+            </div>
+            <div class="stat-icon icon-green">✅</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Upcoming This Week</div>
+              <div class="stat-value">38</div>
+              <div class="stat-trend neutral">Across 5 Companies</div>
+            </div>
+            <div class="stat-icon icon-teal">⏳</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">No-Shows / Postponed</div>
+              <div class="stat-value">2</div>
+              <div class="stat-trend down">&bull; Reschedule pending</div>
+            </div>
+            <div class="stat-icon icon-red">⚠️</div>
+          </div>
+        </div>
+
+        <!-- Filter Panel -->
+        <div class="filter-panel">
+          <form onsubmit="event.preventDefault(); alert('Interview filter applied.');">
+            <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+              
+              <div class="form-group">
+                <label for="intCodeFilter">Interview Code</label>
+                <input type="text" id="intCodeFilter" class="form-control" placeholder="e.g. INT-2026-0001">
+              </div>
+
+              <div class="form-group">
+                <label for="intCompFilter">Company</label>
+                <select id="intCompFilter" class="form-control">
+                  <option value="">All Companies</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="TCS">TCS</option>
+                  <option value="Capgemini">Capgemini</option>
+                  <option value="Persistent">Persistent Systems</option>
+                  <option value="Wipro">Wipro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="intRoundFilter">Interview Round</label>
+                <select id="intRoundFilter" class="form-control">
+                  <option value="">All Rounds</option>
+                  <option value="Aptitude">Aptitude Test</option>
+                  <option value="Technical">Technical Round</option>
+                  <option value="Managerial">Managerial Round</option>
+                  <option value="HR">HR / Final Round</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="intStatusFilter">Status</label>
+                <select id="intStatusFilter" class="form-control">
+                  <option value="">All Statuses</option>
+                  <option value="SCHEDULED" selected>SCHEDULED</option>
+                  <option value="COMPLETED">COMPLETED</option>
+                  <option value="RESCHEDULED">RESCHEDULED</option>
+                  <option value="NO_SHOW">NO_SHOW</option>
+                  <option value="CANCELLED">CANCELLED</option>
+                </select>
+              </div>
+
+              <div class="filter-actions">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                  <span>🔍 Search</span>
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                  <span>Reset</span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Interview Roster Table -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Interview Coordination Roster (8 Selected Drives)</h2>
+              <p class="card-subtitle">Real-time interview pipeline with links to post-interview feedback and decisioning</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="document.getElementById('scheduleModal').classList.add('show')">➕ Schedule Interview</button>
+          </div>
+
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Interview Code</th>
+                    <th>Candidate</th>
+                    <th>Company & Job</th>
+                    <th>Round</th>
+                    <th>Date & Slot</th>
+                    <th>Mode & Location</th>
+                    <th>Status</th>
+                    <th style="text-align: right;">Evaluation Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0001</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rahul Patil</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0001 &bull; Java</div>
+                    </td>
+                    <td>
+                      <div><strong>Infosys Limited</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Associate Java Developer</div>
+                    </td>
+                    <td><span class="badge badge-eligible">Technical Round 1</span></td>
+                    <td>
+                      <div style="font-weight: 600;">25-Oct-2026</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">11:00 AM - 12:00 PM</div>
+                    </td>
+                    <td>
+                      <div>Online (MS Teams)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Panel: Vikas Jadhav</div>
+                    </td>
+                    <td><span class="badge badge-completed">COMPLETED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-secondary btn-sm">View Feedback</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0002</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rahul Patil</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0001 &bull; Java</div>
+                    </td>
+                    <td>
+                      <div><strong>Infosys Limited</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Associate Java Developer</div>
+                    </td>
+                    <td><span class="badge badge-eligible">HR & Final</span></td>
+                    <td>
+                      <div style="font-weight: 600; color: #15803d;">Today, 03:00 PM</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">30-Oct-2026</div>
+                    </td>
+                    <td>
+                      <div>Online (Google Meet)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Panel: Priya Sharma</div>
+                    </td>
+                    <td><span class="badge badge-scheduled">SCHEDULED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-primary btn-sm">Submit Result</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0003</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Sneha More</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0002 &bull; Python</div>
+                    </td>
+                    <td>
+                      <div><strong>Tata Consultancy Services</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Software Engineer - Python</div>
+                    </td>
+                    <td><span class="badge" style="background: #e0e7ff; color: #3730a3;">Aptitude & Coding</span></td>
+                    <td>
+                      <div style="font-weight: 600;">Today, 11:30 AM</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">30-Oct-2026</div>
+                    </td>
+                    <td>
+                      <div>Offline (Kiran Lab 3)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Invigilator: Amit K.</div>
+                    </td>
+                    <td><span class="badge badge-scheduled">SCHEDULED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-primary btn-sm">Submit Result</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0004</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Amit Shinde</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0003 &bull; Java</div>
+                    </td>
+                    <td>
+                      <div><strong>Infosys Limited</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Associate Java Developer</div>
+                    </td>
+                    <td><span class="badge badge-eligible">Technical Round 1</span></td>
+                    <td>
+                      <div style="font-weight: 600;">31-Oct-2026</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">10:00 AM - 11:00 AM</div>
+                    </td>
+                    <td>
+                      <div>Online (MS Teams)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Panel: Rohan Joshi</div>
+                    </td>
+                    <td><span class="badge badge-scheduled">SCHEDULED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-primary btn-sm">Submit Result</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0005</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Neha Jadhav</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0004 &bull; Python</div>
+                    </td>
+                    <td>
+                      <div><strong>Capgemini Services</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Cloud Engineer Trainee</div>
+                    </td>
+                    <td><span class="badge" style="background: #fdf2f8; color: #9d174d;">Managerial Discussion</span></td>
+                    <td>
+                      <div style="font-weight: 600;">Today, 02:00 PM</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">30-Oct-2026</div>
+                    </td>
+                    <td>
+                      <div>Online (Zoom)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Panel: Meera Joshi</div>
+                    </td>
+                    <td><span class="badge badge-scheduled">SCHEDULED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-primary btn-sm">Submit Result</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0006</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Priya Desai</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0006 &bull; Python</div>
+                    </td>
+                    <td>
+                      <div><strong>Persistent Systems</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Data Analyst</div>
+                    </td>
+                    <td><span class="badge badge-eligible">HR & Final</span></td>
+                    <td>
+                      <div style="font-weight: 600;">28-Oct-2026</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">04:00 PM</div>
+                    </td>
+                    <td>
+                      <div>Online (Google Meet)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Panel: Sunil Patil</div>
+                    </td>
+                    <td><span class="badge badge-completed">COMPLETED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-secondary btn-sm">Issue Offer &rarr;</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0007</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Pooja Mali</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0008 &bull; Analytics</div>
+                    </td>
+                    <td>
+                      <div><strong>Persistent Systems</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Data Analyst</div>
+                    </td>
+                    <td><span class="badge badge-eligible">Technical Round 1</span></td>
+                    <td>
+                      <div style="font-weight: 600;">02-Nov-2026</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">02:30 PM</div>
+                    </td>
+                    <td>
+                      <div>Online (MS Teams)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Panel: Aniket R.</div>
+                    </td>
+                    <td><span class="badge badge-scheduled">SCHEDULED</span></td>
+                    <td style="text-align: right;">
+                      <a href="placement-process.html" class="btn btn-primary btn-sm">Submit Result</a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">INT-2026-0008</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Sagar Chavan</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0009 &bull; Python</div>
+                    </td>
+                    <td>
+                      <div><strong>TCS</strong></div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Software Engineer</div>
+                    </td>
+                    <td><span class="badge" style="background: #e0e7ff; color: #3730a3;">Aptitude Test</span></td>
+                    <td>
+                      <div style="font-weight: 600;">26-Oct-2026</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">10:00 AM</div>
+                    </td>
+                    <td>
+                      <div>Campus Hall B</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Candidate Absent</div>
+                    </td>
+                    <td><span class="badge badge-rejected">NO_SHOW</span></td>
+                    <td style="text-align: right;">
+                      <button class="btn btn-secondary btn-sm" onclick="alert('Candidate flagged as No-Show. Recruiter can trigger re-scheduling if medical certificate provided.')">Reschedule</button>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span style="font-size: 0.82rem; color: #64748b;">Showing 8 of 38 ongoing interview rounds</span>
+            <div class="pagination">
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">&raquo;</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Schedule Interview Modal -->
+  <div id="scheduleModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Schedule Candidate Interview Round</h3>
+        <button type="button" class="btn-icon" onclick="document.getElementById('scheduleModal').classList.remove('show')">&times;</button>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Interview round successfully scheduled. Candidate and panel notified via email.'); document.getElementById('scheduleModal').classList.remove('show');">
+        <div class="modal-body">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            
+            <div class="form-group">
+              <label for="schedCandidate">Candidate <span class="required-asterisk">*</span></label>
+              <select id="schedCandidate" class="form-control" required>
+                <option value="1">Rahul Patil (CAN-2026-0001) - Java</option>
+                <option value="2">Sneha More (CAN-2026-0002) - Python</option>
+                <option value="3">Amit Shinde (CAN-2026-0003) - Java</option>
+                <option value="4">Neha Jadhav (CAN-2026-0004) - Python</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label for="schedCompany">Company <span class="required-asterisk">*</span></label>
+                <select id="schedCompany" class="form-control" required>
+                  <option value="Infosys">Infosys Limited</option>
+                  <option value="TCS">Tata Consultancy Services</option>
+                  <option value="Wipro">Wipro Limited</option>
+                  <option value="Capgemini">Capgemini</option>
+                  <option value="Persistent">Persistent Systems</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="schedRound">Round <span class="required-asterisk">*</span></label>
+                <select id="schedRound" class="form-control" required>
+                  <option value="Aptitude">Aptitude & Logical</option>
+                  <option value="Technical" selected>Technical Round 1</option>
+                  <option value="Managerial">Managerial Round</option>
+                  <option value="HR">HR & Cultural Fit</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label for="schedDate">Interview Date <span class="required-asterisk">*</span></label>
+                <input type="date" id="schedDate" class="form-control" value="2026-11-03" required>
+                <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">&check; Interview date cannot be in the past</span>
+              </div>
+
+              <div class="form-group">
+                <label for="schedTime">Scheduled Time <span class="required-asterisk">*</span></label>
+                <input type="time" id="schedTime" class="form-control" value="11:30" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label for="schedMode">Interview Mode <span class="required-asterisk">*</span></label>
+                <select id="schedMode" class="form-control" required>
+                  <option value="Online" selected>Online (Video Conference)</option>
+                  <option value="Offline">Offline (Campus Lab / Office)</option>
+                  <option value="Telephonic">Telephonic Screening</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="schedInterviewer">Interviewer / Panelist Name</label>
+                <input type="text" id="schedInterviewer" class="form-control" placeholder="e.g. Vikas Jadhav (Tech Lead)">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="schedMeetingUrl">Meeting Link / Room Location</label>
+              <input type="text" id="schedMeetingUrl" class="form-control" value="https://meet.google.com/kpa-rpms-eval">
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('scheduleModal').classList.remove('show')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm & Schedule Interview</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

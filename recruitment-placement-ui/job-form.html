@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post / Edit Job Opening - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Job creation and criteria configuration form establishing eligibility thresholds.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Campus Drive Job Requirement Specification Form</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item active">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Eligibility Engine: <strong>Rules Ready</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Job Opening & Eligibility Criteria Form</h1>
+            <p>Define position requirements, compensation scale, and strict automated eligibility cutoff rules</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="jobs.html" class="btn btn-secondary">
+            <span>&larr; Back to Job Openings</span>
+          </a>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <a href="jobs.html">Job Openings</a>
+        <span class="sep">/</span>
+        <span class="current">Job Configuration</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Info Alert -->
+        <div class="alert alert-info">
+          <div>
+            <strong>Automated Eligibility Validation:</strong> The rules configured below (Minimum %, Allowed Qualifications, Passing Years, Backlogs, Primary Technology) are used by the <em>RPMS Candidate Eligibility Engine</em> to automatically accept or reject candidate applications in real-time.
+          </div>
+        </div>
+
+        <form action="jobs.html" method="GET" onsubmit="alert('Success: Job Opening JOB-2026-001 updated and published to candidate portal.');">
+          
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+
+            <!-- Section 1: Basic Information -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">1. Employer & Position Basics</h2>
+                  <p class="card-subtitle">Hiring company selection, title, vacancy volume, and location</p>
+                </div>
+                <span class="code-tag">ID: JOB-2026-001</span>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group">
+                    <label for="jobCompany">Hiring Company <span class="required-asterisk">*</span></label>
+                    <select id="jobCompany" class="form-control" required>
+                      <option value="1" selected>Infosys Limited (COM-101)</option>
+                      <option value="2">Tata Consultancy Services - TCS (COM-102)</option>
+                      <option value="3">Wipro Limited (COM-103)</option>
+                      <option value="4">Capgemini (COM-104)</option>
+                      <option value="5">Persistent Systems (COM-105)</option>
+                      <option value="6">Cognizant (COM-106)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="jobCodeInput">Job Code <span class="required-asterisk">*</span></label>
+                    <input type="text" id="jobCodeInput" class="form-control" value="JOB-2026-001" required placeholder="e.g. JOB-2026-001">
+                    <span style="font-size: 0.75rem; color: #64748b;">Must be unique across all placement drives</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="jobTitle">Job Title / Designation <span class="required-asterisk">*</span></label>
+                    <input type="text" id="jobTitle" class="form-control" value="Associate Java Developer" required placeholder="e.g. Associate Java Developer">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="openings">Number of Openings <span class="required-asterisk">*</span></label>
+                    <input type="number" id="openings" class="form-control" min="1" max="500" value="15" required placeholder="Must be > 0">
+                    <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">&check; Number of openings must be greater than zero</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="empType">Employment Type <span class="required-asterisk">*</span></label>
+                    <select id="empType" class="form-control" required>
+                      <option value="Full-time" selected>Full-time Permanent</option>
+                      <option value="Internship">Internship (6 Months)</option>
+                      <option value="Contract">Contract / Project Basis</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="jobLocation">Primary Job Location <span class="required-asterisk">*</span></label>
+                    <input type="text" id="jobLocation" class="form-control" value="Pune, Maharashtra" required placeholder="City, State">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 2: Compensation -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">2. Compensation & Package (Annual CTC)</h2>
+                  <p class="card-subtitle">Salary range in Lakhs Per Annum (LPA)</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group">
+                    <label for="minPkg">Minimum Package (LPA) <span class="required-asterisk">*</span></label>
+                    <input type="number" id="minPkg" step="0.1" class="form-control" value="4.5" required placeholder="e.g. 4.5">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="maxPkg">Maximum Package (LPA) <span class="required-asterisk">*</span></label>
+                    <input type="number" id="maxPkg" step="0.1" class="form-control" value="6.0" required placeholder="e.g. 6.0">
+                    <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">&check; Minimum package cannot exceed maximum package</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="bond">Service Agreement / Bond (Months)</label>
+                    <input type="number" id="bond" class="form-control" value="12" placeholder="0 if no bond">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="experienceReq">Experience Level Required</label>
+                    <input type="text" id="experienceReq" class="form-control" value="Fresher (0 - 1 Year Experience)">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3: Eligibility Engine Criteria -->
+            <div class="card" style="border: 2px solid #bfdbfe;">
+              <div class="card-header" style="background: #eff6ff;">
+                <div>
+                  <h2 class="card-title" style="color: #1e3a8a;">3. Candidate Eligibility Engine Cutoffs (Mandatory)</h2>
+                  <p class="card-subtitle">Candidates not meeting these exact parameters will be flagged as INELIGIBLE</p>
+                </div>
+                <span class="badge badge-eligible">Automated Gatekeeper</span>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group" style="grid-column: 1 / -1;">
+                    <label>Allowed Qualifications (Select all applicable) <span class="required-asterisk">*</span></label>
+                    <div style="display: flex; gap: 24px; flex-wrap: wrap; padding: 8px 0;">
+                      <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="qual" value="BE" checked> <span>BE (Bachelor of Engineering)</span>
+                      </label>
+                      <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="qual" value="BTech" checked> <span>BTech</span>
+                      </label>
+                      <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="qual" value="MCA" checked> <span>MCA</span>
+                      </label>
+                      <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="qual" value="BCA"> <span>BCA</span>
+                      </label>
+                      <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                        <input type="checkbox" name="qual" value="BSc Computer Science"> <span>BSc Computer Science</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="minPercentage">Minimum Cutoff Percentage (%) <span class="required-asterisk">*</span></label>
+                    <input type="number" id="minPercentage" step="0.1" min="0" max="100" class="form-control" value="60.0" required>
+                    <span style="font-size: 0.75rem; color: #64748b;">Must be between 0 and 100</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="maxBacklogs">Maximum Allowed Active Backlogs <span class="required-asterisk">*</span></label>
+                    <input type="number" id="maxBacklogs" min="0" max="10" class="form-control" value="0" required>
+                    <span style="font-size: 0.75rem; color: #64748b;">0 = Strictly no active backlogs allowed</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="minPassingYear">Minimum Passing Year</label>
+                    <input type="number" id="minPassingYear" class="form-control" value="2024">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="maxPassingYear">Maximum Passing Year</label>
+                    <input type="number" id="maxPassingYear" class="form-control" value="2026">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="reqTech">Required Primary Technology Track <span class="required-asterisk">*</span></label>
+                    <select id="reqTech" class="form-control" required>
+                      <option value="Java" selected>Java Development</option>
+                      <option value="Python">Python Development</option>
+                      <option value="Testing">Software Testing</option>
+                      <option value="Data Analytics">Data Analytics</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="reqSkills">Mandatory Skill Keywords</label>
+                    <input type="text" id="reqSkills" class="form-control" value="Java, SQL, JDBC, OOP, Collections">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 4: Schedule & Deadlines -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">4. Drive Schedule & Lifecycle Status</h2>
+                  <p class="card-subtitle">Application acceptance window and drive operational state</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group">
+                    <label for="postedDate">Drive Posted Date <span class="required-asterisk">*</span></label>
+                    <input type="date" id="postedDate" class="form-control" value="2026-10-20" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="deadline">Application Deadline <span class="required-asterisk">*</span></label>
+                    <input type="date" id="deadline" class="form-control" value="2026-11-15" required>
+                    <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">&check; Application deadline cannot be before posted date</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="driveStatus">Posting Status <span class="required-asterisk">*</span></label>
+                    <select id="driveStatus" class="form-control" required>
+                      <option value="OPEN" selected>OPEN (Live - Accepting Applications)</option>
+                      <option value="DRAFT">DRAFT (Reviewing with Corporate HR)</option>
+                      <option value="CLOSED">CLOSED (Drive Completed)</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="card-footer" style="background: var(--bg-surface); padding: 20px 24px; border: 1px solid var(--border-light); border-radius: var(--radius-lg); display: flex; justify-content: flex-end; gap: 12px;">
+              <a href="jobs.html" class="btn btn-secondary">
+                <span>Cancel</span>
+              </a>
+              <button type="submit" class="btn btn-primary btn-lg">
+                <span>💾 Save & Publish Job Requirement</span>
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

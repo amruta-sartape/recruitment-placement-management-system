@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Profile Form - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Candidate registration and profile update form with academic and eligibility criteria capture.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Student Profile Registration & Verification</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item active">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Validation Service: <strong>Active</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Candidate Profile Entry / Modification</h1>
+            <p>Enter personal details, academic scores, and technical specialization for eligibility evaluation</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="candidates.html" class="btn btn-secondary">
+            <span>&larr; Back to Candidate List</span>
+          </a>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <a href="candidates.html">Candidates</a>
+        <span class="sep">/</span>
+        <span class="current">Candidate Form</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Form Validation Guidelines Alert -->
+        <div class="alert alert-info">
+          <div>
+            <strong>Kiran Academy Validation Protocol:</strong> This form enforces business constraints required by recruitment drives: unique email/mobile, verified graduation percentage (0-100), active backlog declaration, and primary technology alignment.
+          </div>
+        </div>
+
+        <form action="candidates.html" method="GET" onsubmit="alert('Success: Candidate profile CAN-2026-0001 saved with full eligibility attributes.');">
+          
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+
+            <!-- Section 1: Personal Information -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">1. Personal & Contact Information</h2>
+                  <p class="card-subtitle">Identity credentials and contact coordinates for recruitment notifications</p>
+                </div>
+                <span class="code-tag">ID: CAN-2026-0001</span>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group">
+                    <label for="fullName">Full Name <span class="required-asterisk">*</span></label>
+                    <input type="text" id="fullName" class="form-control" value="Rahul Patil" required placeholder="First and last name">
+                    <span style="font-size: 0.75rem; color: #64748b;">As recorded in official degree marksheet</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address <span class="required-asterisk">*</span></label>
+                    <input type="email" id="email" class="form-control" value="rahul.patil01@example.com" required placeholder="valid.email@domain.com">
+                    <span style="font-size: 0.75rem; color: #64748b;">Drive communications and interview links are sent here</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="mobile">Mobile Number (10 Digits) <span class="required-asterisk">*</span></label>
+                    <input type="tel" id="mobile" class="form-control" value="9000000001" pattern="[0-9]{10}" required placeholder="10-digit mobile number">
+                    <span style="font-size: 0.75rem; color: #64748b;">Direct candidate WhatsApp/call contact</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" class="form-control" value="2002-04-12">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" class="form-control">
+                      <option value="Male" selected>Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="profileStatus">Profile Status <span class="required-asterisk">*</span></label>
+                    <select id="profileStatus" class="form-control" required>
+                      <option value="ACTIVE" selected>ACTIVE (Eligible for drives)</option>
+                      <option value="INACTIVE">INACTIVE</option>
+                      <option value="ON_HOLD">ON_HOLD (Course incomplete)</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 2: Academic Information -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">2. Academic Credentials & Scoring</h2>
+                  <p class="card-subtitle">Degree, college affiliation, marks cutoff, and backlog compliance</p>
+                </div>
+                <span class="badge badge-open">SPPU Affiliated</span>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group">
+                    <label for="qualification">Highest Qualification <span class="required-asterisk">*</span></label>
+                    <select id="qualification" class="form-control" required>
+                      <option value="BE" selected>BE (Bachelor of Engineering)</option>
+                      <option value="BTech">BTech</option>
+                      <option value="MCA">MCA (Master of Computer Applications)</option>
+                      <option value="BCA">BCA</option>
+                      <option value="BSc Computer Science">BSc Computer Science</option>
+                      <option value="MSc Computer Science">MSc Computer Science</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="college">College / Institute Name <span class="required-asterisk">*</span></label>
+                    <input type="text" id="college" class="form-control" value="ABC College of Engineering, Pune" required placeholder="Name of graduating college">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="university">University Board</label>
+                    <input type="text" id="university" class="form-control" value="Savitribai Phule Pune University (SPPU)" placeholder="Affiliated university">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="passingYear">Year of Passing <span class="required-asterisk">*</span></label>
+                    <select id="passingYear" class="form-control" required>
+                      <option value="2026">2026 (Upcoming Batch)</option>
+                      <option value="2025" selected>2025 (Current Batch)</option>
+                      <option value="2024">2024</option>
+                      <option value="2023">2023</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="percentage">Aggregate Percentage (%) <span class="required-asterisk">*</span></label>
+                    <input type="number" id="percentage" step="0.1" min="0" max="100" class="form-control" value="68.5" required placeholder="0.00 to 100.00">
+                    <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">&check; Meets 60%+ corporate recruitment cutoff</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="backlogs">Active Backlogs Count <span class="required-asterisk">*</span></label>
+                    <input type="number" id="backlogs" min="0" max="20" class="form-control" value="0" required placeholder="0 if all cleared">
+                    <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">&check; Eligible for zero-backlog enterprise companies</span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3: Skills & Technology -->
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">3. Technology Specialization & Skillset</h2>
+                  <p class="card-subtitle">Training track, primary programming language, secondary libraries, and tools</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                  
+                  <div class="form-group">
+                    <label for="primaryTech">Primary Technology Track <span class="required-asterisk">*</span></label>
+                    <select id="primaryTech" class="form-control" required>
+                      <option value="Java" selected>Java Development (Core Java, Spring, Hibernate)</option>
+                      <option value="Python">Python Development (Python, OOP, MySQL, Django)</option>
+                      <option value="Testing">Software Testing (Manual, Selenium, TestNG)</option>
+                      <option value="Data Analytics">Data Analytics (SQL, Power BI, Python, Tableau)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="secondarySkills">Secondary / Additional Skills</label>
+                    <input type="text" id="secondarySkills" class="form-control" value="SQL, JDBC, MySQL, HTML5, CSS3, Git" placeholder="Comma-separated skill list">
+                    <span style="font-size: 0.75rem; color: #64748b;">Used by automated skill-matching eligibility engine</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="skillLevel">Skill Proficiency Assessment</label>
+                    <select id="skillLevel" class="form-control">
+                      <option value="Intermediate" selected>Intermediate (Completed Academy Projects)</option>
+                      <option value="Advanced">Advanced (Full Stack Trained)</option>
+                      <option value="Basic">Basic / Foundational</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="currentCity">Current Location</label>
+                    <input type="text" id="currentCity" class="form-control" value="Pune, Maharashtra">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="preferredCity">Preferred Placement Location</label>
+                    <input type="text" id="preferredCity" class="form-control" value="Pune, Bengaluru, Hyderabad">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="initialPlacementStatus">Placement Tracking Status</label>
+                    <select id="initialPlacementStatus" class="form-control">
+                      <option value="NOT_PLACED" selected>NOT_PLACED (Eligible for applications)</option>
+                      <option value="PLACED">PLACED</option>
+                      <option value="ON_HOLD">ON_HOLD</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Sample Inline Validation Error Demo Box as required by spec -->
+            <div class="card" style="border-left: 4px solid #b91c1c; background: #fffaf0;">
+              <div class="card-body" style="padding: 16px 20px;">
+                <div style="font-weight: 700; color: #b91c1c; margin-bottom: 6px; font-size: 0.88rem;">Demonstrated Validation Rules (Prototype Compliance):</div>
+                <ul style="margin-left: 20px; font-size: 0.82rem; color: #475569; display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                  <li>&bull; Mobile number must contain exactly 10 digits.</li>
+                  <li>&bull; Percentage must be between 0 and 100.</li>
+                  <li>&bull; Email must follow valid RFC format.</li>
+                  <li>&bull; Duplicate candidate mobile/email is blocked.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Form Action Footer -->
+            <div class="card-footer" style="background: var(--bg-surface); padding: 20px 24px; border: 1px solid var(--border-light); border-radius: var(--radius-lg); display: flex; justify-content: flex-end; gap: 12px;">
+              <a href="candidates.html" class="btn btn-secondary">
+                <span>Cancel</span>
+              </a>
+              <button type="submit" class="btn btn-primary btn-lg">
+                <span>💾</span>
+                <span>Save Candidate Profile</span>
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

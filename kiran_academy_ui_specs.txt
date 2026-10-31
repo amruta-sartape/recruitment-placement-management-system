@@ -1,0 +1,1130 @@
+=================== PAGE 1 (obj 1) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+RECRUITMENT & PLACEMENT
+MANAGEMENT SYSTEM
+UI PROTOTYPE SPECIFICATION DOCUMENT
+Technology-Neutral HTML/CSS Prototype | Applicable to Java and Python Projects
+Purpose: This document defines the non-functional HTML/CSS prototype screens, fields, tables, navigation, visual states, 
+and sample content for the Recruitment & Placement Management System. Backend integration is intentionally outside the 
+scope of this prototype.
+Document Item
+Details
+Document Type
+UI Prototype Specification
+Project
+Recruitment & Placement Management System
+Prototype Technology
+HTML + CSS
+Backend Integration
+Out of Scope
+Applicable To
+Java and Python student projects
+Total Prototype Pages
+12
+Primary Users
+Admin, Recruiter, Placement Officer
+
+=================== PAGE 2 (obj 54) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+1. Prototype Scope
+The prototype represents the proposed enterprise user interface only. It must be navigable using static HTML 
+links and should contain realistic hardcoded sample data so that the screens look like an operational 
+recruitment application.
+
+No Java, Python, JDBC, Flask, Django, Servlet, JSP, API, or database connection is required in the prototype.
+
+All data displayed in tables and cards may be hardcoded in HTML.
+
+Navigation between pages should work using relative HTML links.
+
+Forms do not need to save data; buttons may remain non-functional unless navigation is useful.
+
+The visual design should be consistent across all pages.
+
+The same prototype document is to be used by both Java and Python students.
+2. Common Design Standards
+Area
+Specification
+Header
+Logo, system name, logged-in user name/role, logout control
+Sidebar
+Dashboard, Candidates, Companies, Jobs, Applications, 
+Interviews, Placement Process, Reports
+Content Area
+Page title, breadcrumb, filters, summary cards, tables/forms
+Primary Buttons
+Blue background; examples: Add Candidate, Save, Schedule 
+Interview
+Secondary Buttons
+Neutral/outline style; examples: Reset, Cancel, Back
+Status Badges
+Use clear labels such as OPEN, ACTIVE, SHORTLISTED, 
+SELECTED, JOINED
+Tables
+Header row, alternating rows, action column, realistic sample 
+records
+Responsiveness
+Should remain usable on laptop/desktop and reasonably 
+readable on tablet/mobile widths
+Validation Display
+Show example inline messages or helper text where 
+appropriate
+3. Recommended Navigation Structure
+Menu
+Target Page
+Dashboard
+dashboard.html
+Candidates
+candidates.html
+Companies
+companies.html
+Jobs
+jobs.html
+Applications
+applications.html
+Interviews
+interviews.html
+Placement Process
+placement-process.html
+Reports
+reports.html
+Logout
+login.html
+4. Prototype Page Inventory
+#
+Page
+File Name
+Purpose
+1
+Login
+login.html
+Entry point and role selection
+2
+Dashboard
+dashboard.html
+Operational summary and 
+recent activity
+
+=================== PAGE 3 (obj 217) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+3
+Candidate List
+candidates.html
+Search, filter, and browse 
+candidates
+4
+Candidate Add/Edit
+candidate-form.html
+Candidate profile 
+entry/update
+5
+Candidate Details
+candidate-details.html
+360-degree candidate view
+6
+Companies
+companies.html
+Company master 
+management
+7
+Job Openings
+jobs.html
+Browse and manage job 
+requirements
+8
+Create/Edit Job
+job-form.html
+Detailed job and eligibility 
+criteria
+9
+Applications
+applications.html
+Candidate-job application 
+tracking
+10
+Interviews
+interviews.html
+Interview scheduling and 
+status
+11
+Placement Process
+placement-process.html
+Feedback, offer, joining, 
+placement
+12
+Reports
+reports.html
+Management dashboards and 
+reports
+
+=================== PAGE 4 (obj 310) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+
+=================== PAGE 5 (obj 313) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.1 Login Page - login.html
+Purpose: 
+Provides the visual entry point to the system and demonstrates user role selection.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Username / Email
+Text
+Required
+User login identifier
+Password
+Password
+Required
+Masked password input
+Role
+Dropdown
+Required
+Admin / Recruiter / Placement 
+Officer
+Page Sections
+
+Kiran Academy / project logo
+
+System title
+
+Forgot Password link (prototype only)
+
+Optional note: Authorized users only
+Buttons / Actions
+
+Login
+
+Reset
+Sample Display Data
+Username: recruiter@demo.com | Role: Recruiter
+Navigation
+Successful prototype login button may link to dashboard.html.
+
+=================== PAGE 6 (obj 391) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.2 Dashboard - dashboard.html
+Purpose: 
+Displays high-level recruitment and placement performance for quick operational review.
+Page Sections
+
+Summary Cards: Total Candidates, Active Candidates, Companies, Open Jobs, Applications, Interviews, Selected, 
+Placed
+
+Recruitment Funnel
+
+Upcoming Interviews
+
+Recent Job Openings
+
+Recent Placements
+
+Quick Actions
+Buttons / Actions
+
+View Candidates
+
+View Open Jobs
+
+View Interviews
+
+View Reports
+Sample Display Data
+Total Candidates 2,450 | Open Jobs 28 | Interviews Today 14 | Placed 685
+Navigation
+All sidebar items should link to their respective HTML pages.
+
+=================== PAGE 7 (obj 447) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.3 Candidate List - candidates.html
+Purpose: 
+Allows users to search, filter, and inspect candidate records.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Candidate ID
+Text
+Optional
+Exact/partial candidate 
+identifier
+Candidate Name
+Text
+Optional
+Name search
+Mobile
+Text
+Optional
+Phone search
+Email
+Text
+Optional
+Email search
+Technology
+Dropdown
+Optional
+Java / Python / Testing / Data 
+Analytics
+Passing Year
+Dropdown
+Optional
+Academic year
+Qualification
+Dropdown
+Optional
+BE / BTech / MCA / BSc / etc.
+Placement Status
+Dropdown
+Optional
+Active / Placed / On Hold / 
+Inactive
+Page Sections
+
+Filter panel
+
+Candidate results table
+
+Pagination controls
+Buttons / Actions
+
+Search
+
+Reset
+
+Add Candidate
+Sample Display Data
+CAN1001 | Rahul Patil | Java | BE | 2025 | ACTIVE
+Navigation
+Add Candidate -> candidate-form.html; View -> candidate-details.html; Edit -> candidate-form.html.
+
+=================== PAGE 8 (obj 570) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.4 Candidate Add/Edit - candidate-form.html
+Purpose: 
+Captures candidate personal, academic, skill, and placement profile information.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Full Name
+Text
+Required
+Candidate full name
+Email
+Email
+Required
+Unique email
+Mobile
+Text
+Required
+10-digit mobile
+Date of Birth
+Date
+Optional
+DOB
+Gender
+Radio/Dropdown
+Optional
+Candidate gender
+Qualification
+Dropdown
+Required
+Highest qualification
+College
+Text
+Required
+College name
+University
+Text
+Optional
+University name
+Passing Year
+Number/Dropdown
+Required
+Year of passing
+Percentage / CGPA
+Number
+Required
+Academic score
+Backlog Count
+Number
+Required
+0 or more
+Primary Technology
+Dropdown
+Required
+Primary technology
+Secondary Skills
+Multi-select/Text
+Optional
+Additional skills
+Skill Level
+Dropdown
+Optional
+Basic / Intermediate / 
+Advanced
+Current Location
+Text
+Optional
+Current city
+Preferred Location
+Text
+Optional
+Preferred job location
+Profile Status
+Dropdown
+Required
+ACTIVE / INACTIVE / 
+ON_HOLD
+Page Sections
+
+Personal Information
+
+Academic Information
+
+Skills
+
+Placement Preferences
+Buttons / Actions
+
+Save
+
+Update
+
+Cancel
+Sample Display Data
+Rahul Patil | BE | 2025 | 68% | Java | SQL | Pune
+Navigation
+Cancel/Back -> candidates.html.
+
+=================== PAGE 9 (obj 778) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.5 Candidate Details - candidate-details.html
+Purpose: 
+Provides a complete candidate profile and activity history on one screen.
+Page Sections
+
+Candidate summary header with status badge
+
+Personal Information
+
+Academic Details
+
+Skills
+
+Applications History
+
+Interview History
+
+Offer / Placement History
+Buttons / Actions
+
+Edit Candidate
+
+Back to Candidate List
+Sample Display Data
+Candidate CAN1001 | Rahul Patil | ACTIVE | Java | 3 Applications | 1 Offer
+Navigation
+Edit -> candidate-form.html; application rows may link to applications.html.
+
+=================== PAGE 10 (obj 830) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.6 Companies - companies.html
+Purpose: 
+Maintains and displays employer/company information.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Company Name
+Text
+Required
+Employer name
+Industry
+Text/Dropdown
+Required
+Industry type
+Website
+URL
+Optional
+Company website
+Location
+Text
+Required
+Primary location
+HR Name
+Text
+Required
+Contact person
+HR Email
+Email
+Required
+Contact email
+HR Mobile
+Text
+Optional
+Contact mobile
+Company Type
+Dropdown
+Required
+MNC / Startup / Mid-size / 
+Consultancy
+Status
+Dropdown
+Required
+ACTIVE / INACTIVE
+Page Sections
+
+Company search/filter
+
+Company form or modal prototype
+
+Company list table
+Buttons / Actions
+
+Add Company
+
+Save
+
+Update
+
+Search
+
+Reset
+Sample Display Data
+COM101 | Infosys | IT Services | Pune | ACTIVE | 4 Open Jobs
+Navigation
+Job counts may link to jobs.html.
+
+=================== PAGE 11 (obj 970) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.7 Job Openings - jobs.html
+Purpose: 
+Displays active and historical job requirements with filters and management actions.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Job Code
+Text
+Optional
+Job identifier
+Company
+Dropdown
+Optional
+Employer
+Technology
+Dropdown
+Optional
+Primary technology
+Location
+Dropdown/Text
+Optional
+Job location
+Job Status
+Dropdown
+Optional
+DRAFT / OPEN / CLOSED
+Employment Type
+Dropdown
+Optional
+Full-time / Internship / 
+Contract
+Page Sections
+
+Job filter panel
+
+Job summary cards
+
+Jobs table
+
+Status badges
+Buttons / Actions
+
+Search
+
+Reset
+
+Create Job
+Sample Display Data
+JOB-2026-001 | Infosys | Associate Java Developer | 15 Openings | Pune | OPEN
+Navigation
+Create/Edit -> job-form.html; View Applications -> applications.html.
+
+=================== PAGE 12 (obj 1079) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.8 Create/Edit Job - job-form.html
+Purpose: 
+Captures complete job requirement and candidate eligibility criteria.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Company
+Dropdown
+Required
+Employer
+Job Code
+Text
+Required
+Unique job code
+Job Title
+Text
+Required
+Position title
+Number of Openings
+Number
+Required
+Must be > 0
+Employment Type
+Dropdown
+Required
+Employment type
+Location
+Text
+Required
+Job location
+Minimum Package
+Number
+Optional
+Min annual package
+Maximum Package
+Number
+Optional
+Max annual package
+Qualification
+Multi-select
+Required
+Allowed qualification(s)
+Minimum Percentage
+Number
+Required
+Eligibility cutoff
+Minimum Passing Year
+Number
+Optional
+Lower year bound
+Maximum Passing Year
+Number
+Optional
+Upper year bound
+Maximum Backlogs
+Number
+Required
+Allowed backlog count
+Experience Required
+Text/Number
+Optional
+Experience criteria
+Required Technology
+Dropdown
+Required
+Primary skill
+Required Skills
+Multi-select/Text
+Required
+Additional skills
+Posted Date
+Date
+Required
+Job posted date
+Application Deadline
+Date
+Required
+Last apply date
+Status
+Dropdown
+Required
+DRAFT / OPEN / CLOSED
+Page Sections
+
+Basic Information
+
+Compensation
+
+Eligibility Criteria
+
+Skills
+
+Important Dates
+Buttons / Actions
+
+Save Job
+
+Update Job
+
+Cancel
+Sample Display Data
+Infosys | Associate Java Developer | 60% | 2024-2026 | 0 Backlogs | 4.5-6 LPA
+Navigation
+Cancel/Back -> jobs.html.
+
+=================== PAGE 13 (obj 1309) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.9 Applications - applications.html
+Purpose: 
+Tracks the complete candidate-job application pipeline.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Application ID
+Text
+Optional
+Application identifier
+Candidate
+Text/Dropdown
+Optional
+Candidate filter
+Company
+Dropdown
+Optional
+Company filter
+Job
+Dropdown
+Optional
+Job filter
+Application Status
+Dropdown
+Optional
+Applied / Eligible / Shortlisted /
+Interview / Selected / Rejected
+Date From
+Date
+Optional
+Start date
+Date To
+Date
+Optional
+End date
+Page Sections
+
+Application filters
+
+Pipeline summary
+
+Applications table
+
+Eligibility/status badges
+Buttons / Actions
+
+Search
+
+Reset
+
+Check Eligibility
+
+Shortlist
+
+Reject
+
+Schedule Interview
+
+View History
+Sample Display Data
+APP1001 | Rahul Patil | Infosys | JOB-2026-001 | ELIGIBLE | SHORTLISTED
+Navigation
+Schedule Interview -> interviews.html; candidate name -> candidate-details.html.
+
+=================== PAGE 14 (obj 1443) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.10 Interviews - interviews.html
+Purpose: 
+Schedules interview rounds and tracks interview status.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Candidate
+Dropdown
+Required
+Candidate
+Company
+Dropdown
+Required
+Company
+Job
+Dropdown
+Required
+Job
+Interview Round
+Dropdown
+Required
+Aptitude / Technical / 
+Managerial / HR
+Interview Date
+Date
+Required
+Scheduled date
+Interview Time
+Time
+Required
+Scheduled time
+Mode
+Dropdown
+Required
+Online / Offline / Telephonic
+Interviewer Name
+Text
+Optional
+Interviewer
+Page Sections
+
+Interview scheduling form
+
+Today/upcoming cards
+
+Interview table
+
+Status badges
+Buttons / Actions
+
+Schedule
+
+Reschedule
+
+Add Feedback
+
+Mark No Show
+
+Search
+
+Reset
+Sample Display Data
+INT1008 | Rahul Patil | Infosys | Technical | 03-Nov-2026 11:30 AM | ONLINE | SCHEDULED
+Navigation
+Add Feedback -> placement-process.html.
+
+=================== PAGE 15 (obj 1582) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.11 Selection, Offer & Placement Process - placement-process.html
+Purpose: 
+Represents post-interview decisioning, offer management, joining, and placement confirmation.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Technical Rating
+1-5
+Optional
+Technical score
+Communication Rating
+1-5
+Optional
+Communication score
+Problem Solving Rating
+1-5
+Optional
+Problem-solving score
+Overall Rating
+1-5
+Optional
+Overall score
+Feedback Remarks
+Textarea
+Optional
+Interview remarks
+Interview Result
+Dropdown
+Required
+NEXT_ROUND / SELECTED / 
+REJECTED / ON_HOLD
+Designation
+Text
+Conditional
+Offered role
+Offered Package
+Number
+Conditional
+Offer package
+Offer Date
+Date
+Conditional
+Offer issue date
+Expected Joining Date
+Date
+Conditional
+Expected joining
+Offer Status
+Dropdown
+Conditional
+OFFERED / ACCEPTED / 
+REJECTED / EXPIRED / 
+WITHDRAWN
+Actual Joining Date
+Date
+Conditional
+Actual join date
+Joining Status
+Dropdown
+Conditional
+JOINED / NOT_JOINED / 
+DEFERRED / NO_SHOW
+Page Sections
+
+Tab 1: Interview Feedback
+
+Tab 2: Offer Details
+
+Tab 3: Joining / Placement
+
+Candidate and job summary banner
+Buttons / Actions
+
+Save Feedback
+
+Create Offer
+
+Update Offer Status
+
+Confirm Joining
+
+Mark Placed
+Sample Display Data
+Rahul Patil | SELECTED | Java Developer | 5.2 LPA | Offer ACCEPTED | Joining 01-Dec-2026
+Navigation
+Candidate profile -> candidate-details.html; Reports -> reports.html.
+
+=================== PAGE 16 (obj 1762) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+5.12 Reports - reports.html
+Purpose: 
+Provides management-level recruitment and placement insights using static sample data.
+Fields / Controls
+Field
+Control Type
+Requirement
+Description
+Date From
+Date
+Optional
+Report start date
+Date To
+Date
+Optional
+Report end date
+Technology
+Dropdown
+Optional
+Technology filter
+Company
+Dropdown
+Optional
+Company filter
+Recruiter
+Dropdown
+Optional
+Recruiter filter
+Passing Year
+Dropdown
+Optional
+Candidate batch/year
+Page Sections
+
+KPI cards: Applications, Interviews, Selected, Joined, Placement %
+
+Recruitment Funnel
+
+Company-wise Placement
+
+Technology-wise Placement
+
+Recruiter Performance
+
+Pending Interviews
+
+Open Job Aging
+Buttons / Actions
+
+Apply Filters
+
+Reset
+
+Print / Export (prototype only)
+Sample Display Data
+Applications 1,200 | Shortlisted 760 | Interviewed 480 | Selected 210 | Joined 175 | Offer-to-Join 83.3%
+Navigation
+Sidebar navigation remains available to all main modules.
+
+=================== PAGE 17 (obj 1883) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+6. Key Prototype Navigation Flows
+Flow
+Prototype Navigation
+Candidate Flow
+Login -> Dashboard -> Candidates -> Add Candidate -> Candidate
+Details -> Applications
+Job Flow
+Dashboard -> Jobs -> Create Job -> Jobs List -> View Applications
+Application Flow
+Applications -> Check Eligibility -> Shortlist -> Schedule 
+Interview
+Interview Flow
+Interviews -> Add Feedback -> Selection / Offer / Placement
+Placement Flow
+Selected -> Offer -> Offer Accepted -> Joining -> Mark Placed -> 
+Reports
+7. Standard Status Labels
+Entity
+Suggested Status Values
+Candidate
+ACTIVE, INACTIVE, ON_HOLD, PLACED
+Job
+DRAFT, OPEN, CLOSED
+Application
+APPLIED, ELIGIBLE, SHORTLISTED, INTERVIEW_SCHEDULED, 
+SELECTED, REJECTED, WITHDRAWN
+Interview
+SCHEDULED, COMPLETED, RESCHEDULED, NO_SHOW, 
+CANCELLED
+Offer
+OFFERED, ACCEPTED, REJECTED, EXPIRED, WITHDRAWN
+Joining
+JOINED, NOT_JOINED, DEFERRED, NO_SHOW
+8. Prototype Validation Messages to Demonstrate
+
+Please enter candidate name.
+
+Enter a valid email address.
+
+Mobile number must contain 10 digits.
+
+Percentage must be between 0 and 100.
+
+Number of openings must be greater than zero.
+
+Application deadline cannot be before posted date.
+
+Minimum package cannot exceed maximum package.
+
+Candidate has already applied for this job.
+
+Candidate does not meet the eligibility criteria.
+
+Interview date cannot be in the past.
+9. Sample Data Requirement
+Prototype screens should not be empty. Use realistic static records so reviewers can understand the intended 
+application behavior.
+Data Type
+Minimum Sample Records
+Candidates
+8-10
+Companies
+5-6
+Jobs
+6-8
+Applications
+10-15
+Interviews
+6-8
+Offers / Placements
+4-6
+
+=================== PAGE 18 (obj 2035) ===================
+        Enquiry: 8888809416
+Kiran Academy | Recruitment & Placement Management System | UI Prototype Specification
+10. Recommended Prototype Folder Structure
+recruitment-placement-ui/
+ login.html
+├──
+ dashboard.html
+├──
+ candidates.html
+├──
+ candidate-form.html
+├──
+ candidate-details.html
+├──
+ companies.html
+├──
+ jobs.html
+├──
+ job-form.html
+├──
+ applications.html
+├──
+ interviews.html
+├──
+ placement-process.html
+├──
+ reports.html
+├──
+ css/
+├──
+    style.css
+│└──
+ images/
+└──
+     logo.png
+└──
+11. Prototype Acceptance Checklist
+
+ All 12 HTML pages are present.
+☐
+
+ All pages use a common header, sidebar, typography, spacing, and button style.
+☐
+
+ Navigation links between major pages work.
+☐
+
+ Pages contain realistic static sample data.
+☐
+
+ Candidate, job, application, interview, offer, joining, and report workflows are visually represented.
+☐
+
+ No backend or database integration is required.
+☐
+
+ No technology-specific backend terminology appears in the prototype UI specification.
+☐
+
+ Forms show expected fields and sample validation messages.
+☐
+
+ Tables include meaningful columns, status badges, and action links/buttons.
+☐
+
+ The prototype is readable on common laptop screen sizes.
+☐
+12. Student Prototype Deliverables
+1.
+12 HTML files listed in this document.
+2.
+One shared CSS file.
+3.
+Logo/image assets used by the prototype.
+4.
+Screenshots of all major pages.
+5.
+Short README explaining how to open the prototype and navigate between pages.
+Important: This UI prototype is intentionally technology-neutral. The same specification can be given to students 
+implementing the backend in Java or Python. The prototype should not mention the backend language anywhere in the 
+screens.

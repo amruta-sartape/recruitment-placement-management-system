@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selection, Offer & Placement Process - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Manage interview feedback, corporate offer letters, student acceptance, joining verification, and final placement confirmation.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Post-Interview Decisioning, Offer Letters & Placement Confirmation</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item active">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Offer Desk: <strong>Operational</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Selection, Offer & Placement Lifecycle</h1>
+            <p>Post-interview evaluation, corporate offer letter issuance, student acceptance, joining verification, and official placement record</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="reports.html" class="btn btn-secondary">
+            <span>📈 View Placement Reports</span>
+          </a>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">ND</div>
+            <div class="user-details">
+              <span class="user-name">Neha Deshmukh</span>
+              <span class="user-email">neha.placement@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Placement Process</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Active Candidate Evaluation Summary Banner -->
+        <div class="details-header-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="avatar-large" style="background: rgba(37, 99, 235, 0.4);">RP</div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: white;">Rahul Patil</h2>
+                <span class="code-tag" style="background: rgba(255, 255, 255, 0.2); color: white; border: none;">CAN-2026-0001</span>
+                <span class="badge badge-selected">SELECTED FOR HIRE</span>
+              </div>
+              <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 4px;">
+                Applied for: <strong>Infosys Limited</strong> &bull; Associate Java Developer (JOB-2026-001) &bull; BE, SPPU, 68.5%
+              </div>
+              <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 4px;">
+                Offered Package: <strong>5.2 LPA</strong> &bull; Offer Status: <strong>ACCEPTED</strong> &bull; Scheduled Joining: <strong>01-Dec-2026</strong>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px;">
+            <a href="candidate-details.html" class="btn btn-secondary btn-sm" style="background: rgba(255, 255, 255, 0.15); color: white; border: 1px solid rgba(255, 255, 255, 0.3);">
+              View 360 Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- 3 Stage Tabbed Decisioning Workbench -->
+        <div class="card">
+          
+          <!-- Tab Navigation Headers -->
+          <div class="tab-nav">
+            <button type="button" class="tab-btn active" onclick="switchTab('tab-feedback', this)">
+              <span>📝 Tab 1: Interview Feedback & Rating</span>
+            </button>
+            <button type="button" class="tab-btn" onclick="switchTab('tab-offer', this)">
+              <span>📜 Tab 2: Corporate Offer Details</span>
+            </button>
+            <button type="button" class="tab-btn" onclick="switchTab('tab-joining', this)">
+              <span>🎓 Tab 3: Joining & Placement Confirmation</span>
+            </button>
+          </div>
+
+          <div class="card-body">
+            
+            <!-- TAB 1: Interview Feedback -->
+            <div id="tab-feedback" class="tab-content active">
+              <form onsubmit="event.preventDefault(); alert('Interview feedback saved successfully. Candidate moved to offer preparation.');">
+                
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                  
+                  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;">
+                    <div>
+                      <h3 style="font-size: 1.1rem; font-weight: 700; color: #1e3a8a;">Panel Interview Evaluation & Performance Scores</h3>
+                      <p style="font-size: 0.82rem; color: #64748b;">Record qualitative feedback and quantitative ratings (Scale: 1 to 5 Stars)</p>
+                    </div>
+                    <span class="badge badge-eligible">Technical + HR Combined</span>
+                  </div>
+
+                  <div class="filter-grid" style="grid-template-columns: repeat(4, 1fr);">
+                    
+                    <div class="form-group">
+                      <label for="techRating">Technical Knowledge (1-5)</label>
+                      <select id="techRating" class="form-control">
+                        <option value="5" selected>5 - Outstanding (Core Java, Spring, SQL)</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Competent / Acceptable</option>
+                        <option value="2">2 - Needs Improvement</option>
+                        <option value="1">1 - Unsatisfactory</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="commRating">Communication Skills (1-5)</label>
+                      <select id="commRating" class="form-control">
+                        <option value="5">5 - Excellent Presentation</option>
+                        <option value="4" selected>4 - Fluent & Professional</option>
+                        <option value="3">3 - Adequate</option>
+                        <option value="2">2 - Hesitant</option>
+                        <option value="1">1 - Poor</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="problemRating">Problem Solving & Logic (1-5)</label>
+                      <select id="problemRating" class="form-control">
+                        <option value="5">5 - Exceptional Algorithm Coding</option>
+                        <option value="4" selected>4 - Strong Logic & Edge Handling</option>
+                        <option value="3">3 - Average</option>
+                        <option value="2">2 - Struggled</option>
+                        <option value="1">1 - Unable to solve</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="overallRating">Overall Composite Rating</label>
+                      <select id="overallRating" class="form-control">
+                        <option value="4.5" selected>4.5 / 5.0 (Strong Hire)</option>
+                        <option value="4.0">4.0 / 5.0 (Hire)</option>
+                        <option value="3.0">3.0 / 5.0 (Borderline)</option>
+                        <option value="2.0">2.0 / 5.0 (Reject)</option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label for="feedbackRemarks">Panel Remarks & Evaluation Notes</label>
+                    <textarea id="feedbackRemarks" class="form-control" rows="3">Candidate demonstrates rock-solid understanding of OOP principles, Java Collections hierarchy, and Spring Boot annotations. Effectively resolved database normalization and SQL indexing queries. Cleared HR evaluation with high readiness for client deployment.</textarea>
+                  </div>
+
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: end;">
+                    <div class="form-group">
+                      <label for="intVerdict">Round Decision / Verdict <span class="required-asterisk">*</span></label>
+                      <select id="intVerdict" class="form-control" required>
+                        <option value="SELECTED" selected>SELECTED (Recommend for Corporate Offer)</option>
+                        <option value="NEXT_ROUND">NEXT_ROUND (Schedule Follow-up Technical)</option>
+                        <option value="ON_HOLD">ON_HOLD (Awaiting Batch Rank List)</option>
+                        <option value="REJECTED">REJECTED (Does Not Meet Bar)</option>
+                      </select>
+                    </div>
+
+                    <div style="display: flex; gap: 12px; justify-content: flex-end;">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <span>💾 Save Evaluation Feedback</span>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </form>
+            </div>
+
+            <!-- TAB 2: Offer Details -->
+            <div id="tab-offer" class="tab-content">
+              <form onsubmit="event.preventDefault(); alert('Offer letter parameters updated. Student notification dispatched.');">
+                
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                  
+                  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;">
+                    <div>
+                      <h3 style="font-size: 1.1rem; font-weight: 700; color: #1e3a8a;">Corporate Offer Letter Specification & Student Acceptance</h3>
+                      <p style="font-size: 0.82rem; color: #64748b;">Manage offered CTC, role designation, issuance date, and formal student decision</p>
+                    </div>
+                    <span class="badge badge-accepted">Status: OFFER ACCEPTED</span>
+                  </div>
+
+                  <div class="filter-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    
+                    <div class="form-group">
+                      <label for="offeredRole">Offered Role / Designation <span class="required-asterisk">*</span></label>
+                      <input type="text" id="offeredRole" class="form-control" value="Associate Java Developer" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="offeredCTC">Offered Package (LPA) <span class="required-asterisk">*</span></label>
+                      <input type="number" id="offeredCTC" step="0.1" class="form-control" value="5.2" required>
+                      <span style="font-size: 0.75rem; color: #15803d; font-weight: 600;">Within drive band (4.5 - 6.0 LPA)</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="offerLetterRef">Offer Reference Number</label>
+                      <input type="text" id="offerLetterRef" class="form-control" value="INF/PUN/2026/0942">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="offerIssueDate">Offer Issuance Date <span class="required-asterisk">*</span></label>
+                      <input type="date" id="offerIssueDate" class="form-control" value="2026-10-30" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="joiningExpDate">Expected Joining Date <span class="required-asterisk">*</span></label>
+                      <input type="date" id="joiningExpDate" class="form-control" value="2026-12-01" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="offerStatus">Student Offer Status <span class="required-asterisk">*</span></label>
+                      <select id="offerStatus" class="form-control" required>
+                        <option value="ACCEPTED" selected>ACCEPTED (Formal Acceptance Letter Received)</option>
+                        <option value="OFFERED">OFFERED (Awaiting Candidate Response)</option>
+                        <option value="REJECTED">REJECTED (Candidate Opted for Other Offer)</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="WITHDRAWN">WITHDRAWN</option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label for="offerNotes">Offer Terms & Special Conditions</label>
+                    <textarea id="offerNotes" class="form-control" rows="2">Offer includes standard 12-month training bond. Relocation assistance provided to Pune Hinjawadi Campus. Background verification clearance required before induction.</textarea>
+                  </div>
+
+                  <div style="display: flex; justify-content: flex-end; gap: 12px;">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      <span>📜 Update Offer Status</span>
+                    </button>
+                  </div>
+
+                </div>
+
+              </form>
+            </div>
+
+            <!-- TAB 3: Joining & Final Placement -->
+            <div id="tab-joining" class="tab-content">
+              <form onsubmit="event.preventDefault(); alert('Placement officially confirmed and archived into Kiran Academy Annual Placement Records!');">
+                
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                  
+                  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;">
+                    <div>
+                      <h3 style="font-size: 1.1rem; font-weight: 700; color: #1e3a8a;">Joining Verification & Final Institutional Placement Record</h3>
+                      <p style="font-size: 0.82rem; color: #64748b;">Confirm physical/virtual day-1 corporate onboarding and update student placement status to PLACED</p>
+                    </div>
+                    <span class="badge badge-placed">Placement Target Achieved</span>
+                  </div>
+
+                  <div class="filter-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    
+                    <div class="form-group">
+                      <label for="actualJoinDate">Actual Onboarding Date <span class="required-asterisk">*</span></label>
+                      <input type="date" id="actualJoinDate" class="form-control" value="2026-12-01" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="joinStatus">Onboarding / Joining Status <span class="required-asterisk">*</span></label>
+                      <select id="joinStatus" class="form-control" required>
+                        <option value="JOINED" selected>JOINED (Verified Onboarding Completed)</option>
+                        <option value="NOT_JOINED">NOT_JOINED</option>
+                        <option value="DEFERRED">DEFERRED (Joining Postponed by Employer)</option>
+                        <option value="NO_SHOW">NO_SHOW (Candidate Did Not Report)</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="corpEmpId">Corporate Employee ID</label>
+                      <input type="text" id="corpEmpId" class="form-control" value="INF-89211">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="reportingOffice">Reporting Work Location</label>
+                      <input type="text" id="reportingOffice" class="form-control" value="Infosys Hinjawadi Phase 2, Pune">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="placementOfficer">Authorized Placement Officer</label>
+                      <input type="text" id="placementOfficer" class="form-control" value="Neha Deshmukh (Head Placement Cell)" readonly>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="masterStatusSync">Candidate Master Status Update</label>
+                      <input type="text" id="masterStatusSync" class="form-control" value="Auto-updated to: PLACED" readonly style="color: #15803d; font-weight: 700;">
+                    </div>
+
+                  </div>
+
+                  <div class="alert alert-success">
+                    <div>
+                      <strong>Annual Placement Registry:</strong> Marking this candidate as <em>JOINED</em> will permanently update candidate placement metrics in Kiran Academy's annual NAAC/corporate audit reports.
+                    </div>
+                  </div>
+
+                  <div style="display: flex; justify-content: flex-end; gap: 12px;">
+                    <button type="submit" class="btn btn-success btn-lg">
+                      <span>🎓 Confirm Joining & Mark Candidate PLACED</span>
+                    </button>
+                  </div>
+
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Recent Offer & Placement History Table -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Placement Decisions & Recent Offers Log</h2>
+              <p class="card-subtitle">Institute track record of issued offers, CTC benchmarks, and joining verifications</p>
+            </div>
+            <a href="reports.html" class="btn btn-secondary btn-sm">Full Reports &rarr;</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Employer</th>
+                    <th>Designation</th>
+                    <th>Package CTC</th>
+                    <th>Offer Status</th>
+                    <th>Joining Date</th>
+                    <th>Placement Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rahul Patil</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0001 &bull; Java</div>
+                    </td>
+                    <td>Infosys Limited</td>
+                    <td>Associate Java Developer</td>
+                    <td><strong>5.2 LPA</strong></td>
+                    <td><span class="badge badge-accepted">ACCEPTED</span></td>
+                    <td>01-Dec-2026</td>
+                    <td><span class="badge badge-scheduled">IN PROCESS</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Priya Desai</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0006 &bull; Python</div>
+                    </td>
+                    <td>Persistent Systems</td>
+                    <td>Data Analyst & BI Specialist</td>
+                    <td><strong>5.5 LPA</strong></td>
+                    <td><span class="badge badge-open">OFFERED</span></td>
+                    <td>15-Dec-2026</td>
+                    <td><span class="badge badge-shortlisted">OFFER ISSUED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Komal Gaikwad</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0010 &bull; Java</div>
+                    </td>
+                    <td>Infosys Limited</td>
+                    <td>Java Specialist Engineer</td>
+                    <td><strong>5.4 LPA</strong></td>
+                    <td><span class="badge badge-accepted">ACCEPTED</span></td>
+                    <td>22-Oct-2026</td>
+                    <td><span class="badge badge-placed">JOINED / PLACED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Vishal Khot</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0011 &bull; Java</div>
+                    </td>
+                    <td>Wipro Limited</td>
+                    <td>Associate Software Engineer</td>
+                    <td><strong>4.8 LPA</strong></td>
+                    <td><span class="badge badge-accepted">ACCEPTED</span></td>
+                    <td>18-Oct-2026</td>
+                    <td><span class="badge badge-placed">JOINED / PLACED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rutuja Salunkhe</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0014 &bull; Analytics</div>
+                    </td>
+                    <td>Persistent Systems</td>
+                    <td>Data Analytics Engineer</td>
+                    <td><strong>6.5 LPA</strong></td>
+                    <td><span class="badge badge-accepted">ACCEPTED</span></td>
+                    <td>25-Oct-2026</td>
+                    <td><span class="badge badge-placed">JOINED / PLACED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

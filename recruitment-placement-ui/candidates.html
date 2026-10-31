@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Roster - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Search, filter, and inspect registered candidate profiles and placement statuses.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Student & Candidate Master Directory</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item active">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Directory Pool: <strong>Synchronized</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Candidate Master Directory</h1>
+            <p>Search, filter, and inspect registered candidates, qualification criteria, and placement records</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="candidate-form.html" class="btn btn-primary">
+            <span>➕</span>
+            <span>Register Candidate</span>
+          </a>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Candidates</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Filter Panel -->
+        <div class="filter-panel">
+          <form onsubmit="event.preventDefault(); alert('Filter applied: Displaying matching candidate records.');">
+            <div class="filter-grid">
+              
+              <div class="form-group">
+                <label for="searchId">Candidate ID</label>
+                <input type="text" id="searchId" class="form-control" placeholder="e.g. CAN-2026-0001">
+              </div>
+
+              <div class="form-group">
+                <label for="searchName">Candidate Name</label>
+                <input type="text" id="searchName" class="form-control" placeholder="Search by full name">
+              </div>
+
+              <div class="form-group">
+                <label for="searchMobile">Mobile / Phone</label>
+                <input type="text" id="searchMobile" class="form-control" placeholder="10-digit mobile">
+              </div>
+
+              <div class="form-group">
+                <label for="filterTech">Primary Technology</label>
+                <select id="filterTech" class="form-control">
+                  <option value="">All Technologies</option>
+                  <option value="Java">Java</option>
+                  <option value="Python">Python</option>
+                  <option value="Testing">Software Testing</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="filterQualification">Qualification</label>
+                <select id="filterQualification" class="form-control">
+                  <option value="">All Qualifications</option>
+                  <option value="BE">BE</option>
+                  <option value="BTech">BTech</option>
+                  <option value="MCA">MCA</option>
+                  <option value="BCA">BCA</option>
+                  <option value="BSc Computer Science">BSc Computer Science</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="filterPassingYear">Passing Year</label>
+                <select id="filterPassingYear" class="form-control">
+                  <option value="">All Years</option>
+                  <option value="2026">2026</option>
+                  <option value="2025" selected>2025</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="filterPlacement">Placement Status</label>
+                <select id="filterPlacement" class="form-control">
+                  <option value="">All Statuses</option>
+                  <option value="NOT_PLACED">Not Placed (Active Seekers)</option>
+                  <option value="PLACED">Placed</option>
+                  <option value="ON_HOLD">On Hold</option>
+                  <option value="INACTIVE">Inactive</option>
+                </select>
+              </div>
+
+              <div class="filter-actions">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                  <span>🔍</span>
+                  <span>Filter</span>
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                  <span>Reset</span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Candidate Results Table Card -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Enrolled Candidates Directory</h2>
+              <p class="card-subtitle">Displaying 10 of 2,450 candidate records with eligibility indicators</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-secondary btn-sm" onclick="alert('Exporting candidate list to CSV format as per institute requirement.')">📥 Export CSV</button>
+              <a href="candidate-form.html" class="btn btn-primary btn-sm">➕ Add New Candidate</a>
+            </div>
+          </div>
+
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Candidate Code</th>
+                    <th>Candidate Name</th>
+                    <th>Contact Info</th>
+                    <th>Academic Score</th>
+                    <th>Technology & Skills</th>
+                    <th>Profile Status</th>
+                    <th>Placement Status</th>
+                    <th style="text-align: right;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0001</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rahul Patil</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Pune</div>
+                    </td>
+                    <td>
+                      <div>rahul.patil01@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000001</div>
+                    </td>
+                    <td>
+                      <div><strong>BE (SPPU)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">68.5% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Java</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">SQL, JDBC, Spring</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-applied">Not Placed</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm" title="View 360 profile">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm" title="Edit profile">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm" title="Apply for jobs">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0002</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Sneha More</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Bengaluru</div>
+                    </td>
+                    <td>
+                      <div>sneha.more02@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000002</div>
+                    </td>
+                    <td>
+                      <div><strong>BTech (Modern College)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">74.2% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Python</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">MySQL, Django, REST</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-applied">Not Placed</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0003</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Amit Shinde</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Pune</div>
+                    </td>
+                    <td>
+                      <div>amit.shinde03@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000003</div>
+                    </td>
+                    <td>
+                      <div><strong>MCA (MIT College)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">71.0% &bull; 0 Backlogs &bull; 2024</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Java</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Core Java, Hibernate, SQL</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-applied">Not Placed</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0004</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Neha Jadhav</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pimpri &bull; Preferred: Pune</div>
+                    </td>
+                    <td>
+                      <div>neha.jadhav04@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000004</div>
+                    </td>
+                    <td>
+                      <div><strong>BE (DY Patil College)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">82.4% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Python</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Flask, PostgreSQL, Pandas</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-scheduled">In Process</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0005</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rohit Pawar</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pimpri &bull; Preferred: Pune</div>
+                    </td>
+                    <td>
+                      <div>rohit.pawar05@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000005</div>
+                    </td>
+                    <td>
+                      <div><strong>BTech (PCCOE)</strong></div>
+                      <div style="font-size: 0.75rem; color: #b45309; font-weight: 600;">59.5% &bull; 1 Backlog &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Java</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Java, MySQL, HTML</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-applied">Not Placed</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0006</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Priya Desai</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Hyderabad</div>
+                    </td>
+                    <td>
+                      <div>priya.desai06@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000006</div>
+                    </td>
+                    <td>
+                      <div><strong>MCA (Fergusson College)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">76.1% &bull; 0 Backlogs &bull; 2024</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Python</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Python, OOP, FastApi</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-shortlisted">Offer Issued</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0007</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Akash Kale</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Pune</div>
+                    </td>
+                    <td>
+                      <div>akash.kale07@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000007</div>
+                    </td>
+                    <td>
+                      <div><strong>BE (Sinhgad College)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">64.8% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Testing</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Selenium, Manual, JIRA</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-applied">Not Placed</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0008</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Pooja Mali</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Mumbai</div>
+                    </td>
+                    <td>
+                      <div>pooja.mali08@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000008</div>
+                    </td>
+                    <td>
+                      <div><strong>BCA (Indira College)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">72.6% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Data Analytics</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">SQL, Power BI, Python</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-applied">Not Placed</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="applications.html" class="btn btn-primary btn-sm">Apply</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0010</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Komal Gaikwad</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pune &bull; Preferred: Bengaluru</div>
+                    </td>
+                    <td>
+                      <div>komal.gaikwad10@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000010</div>
+                    </td>
+                    <td>
+                      <div><strong>BE (AISSMS Pune)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">78.9% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Java</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Spring Boot, Microservices</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-placed">Placed (5.4 LPA)</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="placement-process.html" class="btn btn-secondary btn-sm">Offer Details</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">CAN-2026-0014</span></td>
+                    <td>
+                      <a href="candidate-details.html" style="font-weight: 700; color: #1e3a8a;">Rutuja Salunkhe</a>
+                      <div style="font-size: 0.75rem; color: #64748b;">Pimpri &bull; Preferred: Pune</div>
+                    </td>
+                    <td>
+                      <div>rutuja.salunkhe14@example.com</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">+91 9000000014</div>
+                    </td>
+                    <td>
+                      <div><strong>BTech (PCCOE)</strong></div>
+                      <div style="font-size: 0.75rem; color: #15803d; font-weight: 600;">85.0% &bull; 0 Backlogs &bull; 2025</div>
+                    </td>
+                    <td>
+                      <span class="badge badge-open">Data Analytics</span>
+                      <div style="font-size: 0.72rem; color: #64748b; margin-top: 2px;">Python, Tableau, ML, SQL</div>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td><span class="badge badge-placed">Placed (6.5 LPA)</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                        <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="placement-process.html" class="btn btn-secondary btn-sm">Offer Details</a>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="pagination-info">
+              Showing 1 to 10 of 2,450 candidate entries
+            </div>
+            <div class="pagination">
+              <button class="page-btn" disabled>&laquo;</button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">4</button>
+              <button class="page-btn">&raquo;</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+========================================================================
+    KIRAN ACADEMY - RECRUITMENT & PLACEMENT MANAGEMENT SYSTEM
+           AUDIT REPORT GENERATED: 2026-10-31 11:23:24
+========================================================================
+
+1. RECRUITMENT CONVERSION FUNNEL METRICS:
+---------------------------------------------
+  Total Candidates Registered : 13
+  Total Applications Filed    : 9
+  Eligible Candidates Passed  : 8
+  Candidates Shortlisted      : 7
+  Interview Rounds Conducted  : 4
+  Candidates Selected         : 3
+  Verified Final Placements   : 4
+  Offer-to-Join Conversion    : 133.3%
+
+2. COMPANY-WISE PLACEMENT SHARE:
+------------------------------------------------------------------------
+Company Name                     Industry             Placed   Avg CTC   
+------------------------------------------------------------------------
+Infosys Limited                  IT Services          3        5.40 LPA
+Persistent Systems               Product Engineering  1        6.50 LPA
+Tata Consultancy Services        IT Services          0        0.00 LPA
+Wipro Limited                    IT Services          0        0.00 LPA
+Capgemini                        Consulting           0        0.00 LPA
+Cognizant                        IT Services          0        0.00 LPA
+
+3. TECHNOLOGY TRACK DISTRIBUTION:
+-------------------------------------------------------
+Technology Specialization      Placed     Highest CTC 
+-------------------------------------------------------
+Java                           3          5.40 LPA
+Data Analytics                 1          6.50 LPA
+
+========================================================================
+End of Official Institutional Report

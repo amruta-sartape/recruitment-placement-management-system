@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Entry portal and role-based authentication for the Recruitment & Placement Management System (RPMS).">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-card">
+    <div class="login-card-header">
+      <img src="images/logo.svg" alt="Kiran Academy RPMS Logo" style="height: 48px; width: auto;">
+      <h2 style="font-size: 1.35rem; font-weight: 800; color: #1e3a8a; margin-top: 8px;">Recruitment & Placement Portal</h2>
+      <p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">Enterprise Placement Management System | Prototype</p>
+    </div>
+
+    <div class="login-card-body">
+      <form action="dashboard.html" method="GET">
+        
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label for="username">Username / Email <span class="required-asterisk">*</span></label>
+          <input type="text" id="username" name="username" class="form-control" value="recruiter@demo.com" required placeholder="e.g. recruiter@demo.com">
+          <span style="font-size: 0.75rem; color: #64748b;">Demo credentials pre-filled for evaluation</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label for="password">Password <span class="required-asterisk">*</span></label>
+            <a href="#" onclick="alert('Prototype demonstration: Any password will authenticate in this prototype environment.'); return false;" style="font-size: 0.78rem;">Forgot password?</a>
+          </div>
+          <input type="password" id="password" name="password" class="form-control" value="demo1234" required placeholder="Enter password">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 24px;">
+          <label for="role">Assigned System Role <span class="required-asterisk">*</span></label>
+          <select id="role" name="role" class="form-control" required>
+            <option value="RECRUITER" selected>Recruiter (Drive & Schedule Management)</option>
+            <option value="ADMIN">System Administrator (Full Control)</option>
+            <option value="PLACEMENT_OFFICER">Placement Officer (Offers & Verification)</option>
+          </select>
+          <span style="font-size: 0.75rem; color: #64748b;">Select operational persona to view permissions</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Sign In to Dashboard &rarr;
+          </button>
+          <button type="reset" class="btn btn-secondary btn-sm" style="width: 100%;">
+            Reset Form
+          </button>
+        </div>
+
+      </form>
+
+      <div class="alert alert-info" style="margin-top: 24px; font-size: 0.8rem; padding: 10px 14px;">
+        <div>
+          <strong>Evaluation Note:</strong> This is an enterprise UI prototype specified by Kiran Academy. Navigation links between pages are fully functional with realistic mock records.
+        </div>
+      </div>
+    </div>
+
+    <div class="login-card-footer">
+      <span>Institutional Helpdesk: <strong>8888809416</strong> | Authorized Users Only</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Partners & Companies - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Company master management, recruiter coordinates, and corporate recruitment partnerships.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Corporate Employer Relations & Campus Hiring Partners</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item active">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Partner Directory: <strong>Active</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Corporate Employer Directory</h1>
+            <p>Maintain employer profiles, HR contacts, industry categorization, and associated campus openings</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn btn-primary" onclick="document.getElementById('companyModal').classList.add('show')">
+            <span>➕</span>
+            <span>Add New Employer</span>
+          </button>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Companies</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Search & Filter Panel -->
+        <div class="filter-panel">
+          <form onsubmit="event.preventDefault(); alert('Company filter applied.');">
+            <div class="filter-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+              
+              <div class="form-group">
+                <label for="compName">Company Name</label>
+                <input type="text" id="compName" class="form-control" placeholder="Search by company name">
+              </div>
+
+              <div class="form-group">
+                <label for="compIndustry">Industry Sector</label>
+                <select id="compIndustry" class="form-control">
+                  <option value="">All Industries</option>
+                  <option value="IT Services">IT Services & Solutions</option>
+                  <option value="Product Engineering">Product Engineering</option>
+                  <option value="Consulting">Consulting & Digital</option>
+                  <option value="Financial Tech">Fintech & Banking</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="compType">Company Type</label>
+                <select id="compType" class="form-control">
+                  <option value="">All Types</option>
+                  <option value="MNC">MNC (Multinational)</option>
+                  <option value="Mid-size">Mid-size Corporation</option>
+                  <option value="Startup">Growth Startup</option>
+                  <option value="Consultancy">Consultancy Partner</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="compStatus">Partnership Status</label>
+                <select id="compStatus" class="form-control">
+                  <option value="">All Statuses</option>
+                  <option value="ACTIVE" selected>ACTIVE (Currently Hiring)</option>
+                  <option value="INACTIVE">INACTIVE</option>
+                </select>
+              </div>
+
+              <div class="filter-actions">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                  <span>🔍</span>
+                  <span>Filter</span>
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                  <span>Reset</span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Companies Table Card -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Corporate Hiring Partners (6 Listed)</h2>
+              <p class="card-subtitle">Verified campus placement recruiters conducting hiring drives at Kiran Academy</p>
+            </div>
+            <a href="jobs.html" class="btn btn-secondary btn-sm">View All Job Openings (28) &rarr;</a>
+          </div>
+
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Company Code</th>
+                    <th>Employer & Website</th>
+                    <th>Industry & Type</th>
+                    <th>Locations</th>
+                    <th>HR Contact Person</th>
+                    <th>Active Drives</th>
+                    <th>Status</th>
+                    <th style="text-align: right;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr>
+                    <td><span class="code-tag">COM-101</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Infosys Limited</div>
+                      <a href="https://www.infosys.com" target="_blank" style="font-size: 0.75rem; color: #64748b;">www.infosys.com &nearr;</a>
+                    </td>
+                    <td>
+                      <div>IT Services & Consulting</div>
+                      <span class="badge" style="background: #f1f5f9; color: #334155;">Tier-1 MNC</span>
+                    </td>
+                    <td>Pune, Bengaluru, Hyderabad</td>
+                    <td>
+                      <div style="font-weight: 600;">Priya Sharma (HR Lead)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">priya.sharma@infosys.com &bull; +91 9823011223</div>
+                    </td>
+                    <td>
+                      <a href="jobs.html" class="badge badge-open" title="Click to view openings">4 Open Jobs (45 Vacancies)</a>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="jobs.html" class="btn btn-secondary btn-sm">View Jobs</a>
+                        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('companyModal').classList.add('show')">Edit</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">COM-102</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Tata Consultancy Services (TCS)</div>
+                      <a href="https://www.tcs.com" target="_blank" style="font-size: 0.75rem; color: #64748b;">www.tcs.com &nearr;</a>
+                    </td>
+                    <td>
+                      <div>IT Services & Outsourcing</div>
+                      <span class="badge" style="background: #f1f5f9; color: #334155;">Tier-1 MNC</span>
+                    </td>
+                    <td>Mumbai, Pune, Chennai</td>
+                    <td>
+                      <div style="font-weight: 600;">Rajesh Nair (Campus HR)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">rajesh.nair@tcs.com &bull; +91 9823022334</div>
+                    </td>
+                    <td>
+                      <a href="jobs.html" class="badge badge-open">6 Open Jobs (60 Vacancies)</a>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="jobs.html" class="btn btn-secondary btn-sm">View Jobs</a>
+                        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('companyModal').classList.add('show')">Edit</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">COM-103</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Wipro Limited</div>
+                      <a href="https://www.wipro.com" target="_blank" style="font-size: 0.75rem; color: #64748b;">www.wipro.com &nearr;</a>
+                    </td>
+                    <td>
+                      <div>Technology & Software Services</div>
+                      <span class="badge" style="background: #f1f5f9; color: #334155;">Tier-1 MNC</span>
+                    </td>
+                    <td>Bengaluru, Pune, Hyderabad</td>
+                    <td>
+                      <div style="font-weight: 600;">Anand Verma (Talent Acquisition)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">anand.verma@wipro.com &bull; +91 9823033445</div>
+                    </td>
+                    <td>
+                      <a href="jobs.html" class="badge badge-open">3 Open Jobs (25 Vacancies)</a>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="jobs.html" class="btn btn-secondary btn-sm">View Jobs</a>
+                        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('companyModal').classList.add('show')">Edit</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">COM-104</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Capgemini Technology Services</div>
+                      <a href="https://www.capgemini.com" target="_blank" style="font-size: 0.75rem; color: #64748b;">www.capgemini.com &nearr;</a>
+                    </td>
+                    <td>
+                      <div>Consulting & Digital Solutions</div>
+                      <span class="badge" style="background: #f1f5f9; color: #334155;">Tier-1 MNC</span>
+                    </td>
+                    <td>Pune, Mumbai, Bengaluru</td>
+                    <td>
+                      <div style="font-weight: 600;">Meera Joshi (HR Business Partner)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">meera.joshi@capgemini.com &bull; +91 9823044556</div>
+                    </td>
+                    <td>
+                      <a href="jobs.html" class="badge badge-open">5 Open Jobs (40 Vacancies)</a>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="jobs.html" class="btn btn-secondary btn-sm">View Jobs</a>
+                        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('companyModal').classList.add('show')">Edit</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">COM-105</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Persistent Systems</div>
+                      <a href="https://www.persistent.com" target="_blank" style="font-size: 0.75rem; color: #64748b;">www.persistent.com &nearr;</a>
+                    </td>
+                    <td>
+                      <div>Product Engineering & Cloud</div>
+                      <span class="badge" style="background: #f1f5f9; color: #334155;">Mid-size Product Co</span>
+                    </td>
+                    <td>Pune, Nagpur, Goa</td>
+                    <td>
+                      <div style="font-weight: 600;">Sunil Patil (Senior HR Manager)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">sunil.patil@persistent.com &bull; +91 9823055667</div>
+                    </td>
+                    <td>
+                      <a href="jobs.html" class="badge badge-open">4 Open Jobs (30 Vacancies)</a>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="jobs.html" class="btn btn-secondary btn-sm">View Jobs</a>
+                        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('companyModal').classList.add('show')">Edit</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="code-tag">COM-106</span></td>
+                    <td>
+                      <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Cognizant Technology Solutions</div>
+                      <a href="https://www.cognizant.com" target="_blank" style="font-size: 0.75rem; color: #64748b;">www.cognizant.com &nearr;</a>
+                    </td>
+                    <td>
+                      <div>Digital & Enterprise IT</div>
+                      <span class="badge" style="background: #f1f5f9; color: #334155;">Tier-1 MNC</span>
+                    </td>
+                    <td>Pune, Hyderabad, Chennai</td>
+                    <td>
+                      <div style="font-weight: 600;">Divya Rao (University Relations)</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">divya.rao@cognizant.com &bull; +91 9823066778</div>
+                    </td>
+                    <td>
+                      <a href="jobs.html" class="badge badge-open">6 Open Jobs (50 Vacancies)</a>
+                    </td>
+                    <td><span class="badge badge-active">Active</span></td>
+                    <td style="text-align: right;">
+                      <div class="action-links" style="justify-content: flex-end;">
+                        <a href="jobs.html" class="btn btn-secondary btn-sm">View Jobs</a>
+                        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('companyModal').classList.add('show')">Edit</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span style="font-size: 0.82rem; color: #64748b;">Displaying 6 of 48 registered corporate hiring partners</span>
+            <div class="pagination">
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">&raquo;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add/Edit Company Modal Dialog Prototype -->
+  <div id="companyModal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Register Corporate Employer</h3>
+        <button type="button" class="btn-icon" onclick="document.getElementById('companyModal').classList.remove('show')">&times;</button>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Employer profile registered into company repository.'); document.getElementById('companyModal').classList.remove('show');">
+        <div class="modal-body">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            
+            <div class="form-group">
+              <label for="newCompName">Company Name <span class="required-asterisk">*</span></label>
+              <input type="text" id="newCompName" class="form-control" required placeholder="e.g. Hexaware Technologies">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label for="newCompIndustry">Industry Sector <span class="required-asterisk">*</span></label>
+                <select id="newCompIndustry" class="form-control" required>
+                  <option value="IT Services">IT Services</option>
+                  <option value="Product Engineering">Product Engineering</option>
+                  <option value="Fintech">Fintech</option>
+                  <option value="Consulting">Consulting</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="newCompType">Company Type <span class="required-asterisk">*</span></label>
+                <select id="newCompType" class="form-control" required>
+                  <option value="MNC">MNC</option>
+                  <option value="Mid-size">Mid-size</option>
+                  <option value="Startup">Startup</option>
+                  <option value="Consultancy">Consultancy</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="newCompWebsite">Website URL</label>
+              <input type="url" id="newCompWebsite" class="form-control" placeholder="https://www.company.com">
+            </div>
+
+            <div class="form-group">
+              <label for="newCompLocation">Primary Office Location <span class="required-asterisk">*</span></label>
+              <input type="text" id="newCompLocation" class="form-control" required placeholder="City, State (e.g. Pune, Maharashtra)">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label for="newHrName">HR Contact Person <span class="required-asterisk">*</span></label>
+                <input type="text" id="newHrName" class="form-control" required placeholder="HR Manager Name">
+              </div>
+
+              <div class="form-group">
+                <label for="newHrMobile">HR Mobile</label>
+                <input type="tel" id="newHrMobile" class="form-control" placeholder="10-digit number">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="newHrEmail">HR Official Email <span class="required-asterisk">*</span></label>
+              <input type="email" id="newHrEmail" class="form-control" required placeholder="recruiter@company.com">
+            </div>
+
+            <div class="form-group">
+              <label for="newStatus">Partnership Status</label>
+              <select id="newStatus" class="form-control">
+                <option value="ACTIVE" selected>ACTIVE (Open for Campus Placement)</option>
+                <option value="INACTIVE">INACTIVE</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('companyModal').classList.remove('show')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Employer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Recruitment & Placement Management System | Kiran Academy</title>
+  <meta name="description" content="Operational dashboard providing high-level recruitment and placement performance metrics.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Helpline & Academy Bar -->
+  <div class="top-banner">
+    <div>
+      <span>Kiran Academy RPMS &bull; Campus & Institute Training Placement Drive Portal</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span>Helpline / Enquiry: <a href="tel:8888809416">8888809416</a></span>
+      <span class="badge-pill">Academic Year 2026-27</span>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="brand-logo">
+          <img src="images/logo.svg" alt="Kiran Academy Logo">
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Operations</div>
+        
+        <a href="dashboard.html" class="nav-item active">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="candidates.html" class="nav-item">
+          <span class="icon">👥</span>
+          <span>Candidates</span>
+          <span class="count-badge">2.4k</span>
+        </a>
+
+        <a href="companies.html" class="nav-item">
+          <span class="icon">🏢</span>
+          <span>Companies</span>
+          <span class="count-badge">48</span>
+        </a>
+
+        <a href="jobs.html" class="nav-item">
+          <span class="icon">💼</span>
+          <span>Job Openings</span>
+          <span class="count-badge">28</span>
+        </a>
+
+        <div class="nav-section-title">Placement Pipeline</div>
+
+        <a href="applications.html" class="nav-item">
+          <span class="icon">📑</span>
+          <span>Applications</span>
+          <span class="count-badge">1.2k</span>
+        </a>
+
+        <a href="interviews.html" class="nav-item">
+          <span class="icon">📅</span>
+          <span>Interviews</span>
+          <span class="count-badge">14 Today</span>
+        </a>
+
+        <a href="placement-process.html" class="nav-item">
+          <span class="icon">🎯</span>
+          <span>Placement Process</span>
+        </a>
+
+        <div class="nav-section-title">Analytics & Config</div>
+
+        <a href="reports.html" class="nav-item">
+          <span class="icon">📈</span>
+          <span>Reports & KPI</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="system-status-indicator">
+          <div class="status-dot"></div>
+          <span>Database Engine: <strong>Online</strong></span>
+        </div>
+        <div style="font-size: 0.73rem; color: #64748b; margin-top: 4px;">RPMS Enterprise Data Store Connected</div>
+      </div>
+    </aside>
+
+    <!-- App Main Area -->
+    <main class="app-main">
+      
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>Executive Recruitment Dashboard</h1>
+            <p>Operational summary of current recruitment drives, interviews, and placements</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="role-pill">
+            <span>🛡️</span>
+            <span>Role: Recruiter</span>
+          </div>
+
+          <div class="user-profile-widget">
+            <div class="user-avatar">AK</div>
+            <div class="user-details">
+              <span class="user-name">Amit Kulkarni</span>
+              <span class="user-email">amit.recruiter@kiranacademy.com</span>
+            </div>
+          </div>
+
+          <a href="login.html" class="btn-logout" title="Exit portal">
+            <span>🚪</span>
+            <span>Logout</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb-bar">
+        <a href="dashboard.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Dashboard</span>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+
+        <!-- Top KPI Stats Grid -->
+        <div class="stats-grid">
+          
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Total Candidates</div>
+              <div class="stat-value">2,450</div>
+              <div class="stat-trend up">&uarr; +12% this month</div>
+            </div>
+            <div class="stat-icon icon-blue">👥</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Partner Companies</div>
+              <div class="stat-value">48</div>
+              <div class="stat-trend neutral">6 Active Drives</div>
+            </div>
+            <div class="stat-icon icon-teal">🏢</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Open Jobs</div>
+              <div class="stat-value">28</div>
+              <div class="stat-trend up">&bull; 145 Total Vacancies</div>
+            </div>
+            <div class="stat-icon icon-amber">💼</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Total Applications</div>
+              <div class="stat-value">1,240</div>
+              <div class="stat-trend up">&uarr; 880 Eligible</div>
+            </div>
+            <div class="stat-icon icon-purple">📑</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Interviews Today</div>
+              <div class="stat-value">14</div>
+              <div class="stat-trend neutral">4 Technical, 10 Aptitude</div>
+            </div>
+            <div class="stat-icon icon-blue">📅</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Selected Candidates</div>
+              <div class="stat-value">210</div>
+              <div class="stat-trend up">&uarr; Offers In-Transit</div>
+            </div>
+            <div class="stat-icon icon-green">🏆</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-info">
+              <div class="stat-label">Final Placed</div>
+              <div class="stat-value">685</div>
+              <div class="stat-trend up">&uarr; 83.3% Offer-to-Join</div>
+            </div>
+            <div class="stat-icon icon-green">🎓</div>
+          </div>
+
+        </div>
+
+        <!-- Recruitment Funnel Card -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Recruitment & Placement Conversion Funnel</h2>
+              <p class="card-subtitle">Real-time candidate transition rate through institute placement stages</p>
+            </div>
+            <a href="reports.html" class="btn btn-secondary btn-sm">Full Analytics Report &rarr;</a>
+          </div>
+          <div class="card-body">
+            <div class="funnel-container">
+              
+              <div class="funnel-step">
+                <div class="step-title">1. Registered</div>
+                <div class="step-count">2,450</div>
+                <div class="step-rate">Active Pool</div>
+              </div>
+
+              <div style="color: #94a3b8; font-size: 1.2rem;">&rarr;</div>
+
+              <div class="funnel-step">
+                <div class="step-title">2. Applied</div>
+                <div class="step-count">1,240</div>
+                <div class="step-rate">50.6% Rate</div>
+              </div>
+
+              <div style="color: #94a3b8; font-size: 1.2rem;">&rarr;</div>
+
+              <div class="funnel-step">
+                <div class="step-title">3. Eligible Engine</div>
+                <div class="step-count">880</div>
+                <div class="step-rate">70.9% Passed</div>
+              </div>
+
+              <div style="color: #94a3b8; font-size: 1.2rem;">&rarr;</div>
+
+              <div class="funnel-step">
+                <div class="step-title">4. Shortlisted</div>
+                <div class="step-count">520</div>
+                <div class="step-rate">59.1% Shortlist</div>
+              </div>
+
+              <div style="color: #94a3b8; font-size: 1.2rem;">&rarr;</div>
+
+              <div class="funnel-step">
+                <div class="step-title">5. Interviewed</div>
+                <div class="step-count">340</div>
+                <div class="step-rate">65.4% Attended</div>
+              </div>
+
+              <div style="color: #94a3b8; font-size: 1.2rem;">&rarr;</div>
+
+              <div class="funnel-step">
+                <div class="step-title">6. Selected</div>
+                <div class="step-count">210</div>
+                <div class="step-rate">61.7% Cleared</div>
+              </div>
+
+              <div style="color: #94a3b8; font-size: 1.2rem;">&rarr;</div>
+
+              <div class="funnel-step" style="border-color: #86efac; background: #f0fdf4;">
+                <div class="step-title" style="color: #15803d;">7. Joined / Placed</div>
+                <div class="step-count" style="color: #15803d;">175</div>
+                <div class="step-rate" style="color: #15803d; font-weight: 700;">83.3% Conversion</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Column Layout: Upcoming Interviews & Quick Actions -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+          
+          <!-- Upcoming Interviews -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h2 class="card-title">Interviews Scheduled Today</h2>
+                <p class="card-subtitle">Active evaluation rounds requiring recruiter coordination</p>
+              </div>
+              <a href="interviews.html" class="btn btn-secondary btn-sm">Manage All (14)</a>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Candidate</th>
+                      <th>Company</th>
+                      <th>Round</th>
+                      <th>Mode</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>10:00 AM</strong></td>
+                      <td>
+                        <a href="candidate-details.html" style="font-weight: 600;">Rahul Patil</a>
+                        <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0001 &bull; Java</div>
+                      </td>
+                      <td>Infosys</td>
+                      <td><span class="code-tag">Technical L1</span></td>
+                      <td><span class="badge badge-active">Online</span></td>
+                      <td><span class="badge badge-scheduled">Scheduled</span></td>
+                      <td>
+                        <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>11:30 AM</strong></td>
+                      <td>
+                        <a href="candidate-details.html" style="font-weight: 600;">Sneha More</a>
+                        <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0002 &bull; Python</div>
+                      </td>
+                      <td>TCS</td>
+                      <td><span class="code-tag">Aptitude</span></td>
+                      <td><span class="badge badge-active">Offline / Campus</span></td>
+                      <td><span class="badge badge-scheduled">Scheduled</span></td>
+                      <td>
+                        <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>02:00 PM</strong></td>
+                      <td>
+                        <a href="candidate-details.html" style="font-weight: 600;">Neha Jadhav</a>
+                        <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0004 &bull; Python</div>
+                      </td>
+                      <td>Capgemini</td>
+                      <td><span class="code-tag">Managerial</span></td>
+                      <td><span class="badge badge-active">Online</span></td>
+                      <td><span class="badge badge-scheduled">Scheduled</span></td>
+                      <td>
+                        <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>03:30 PM</strong></td>
+                      <td>
+                        <a href="candidate-details.html" style="font-weight: 600;">Priya Desai</a>
+                        <div style="font-size: 0.75rem; color: #64748b;">CAN-2026-0006 &bull; Python</div>
+                      </td>
+                      <td>Persistent</td>
+                      <td><span class="code-tag">HR Round</span></td>
+                      <td><span class="badge badge-active">Online</span></td>
+                      <td><span class="badge badge-scheduled">Scheduled</span></td>
+                      <td>
+                        <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: #64748b;">Showing 4 of 14 sessions today</span>
+              <a href="interviews.html" style="font-size: 0.82rem; font-weight: 600;">View Interview Calendar &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Quick Navigation & Operational Shortlinks -->
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">Quick Action Hub</h2>
+              </div>
+              <div class="card-body" style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="candidate-form.html" class="btn btn-primary" style="justify-content: flex-start;">
+                  <span>➕</span>
+                  <span>Register New Candidate</span>
+                </a>
+                <a href="job-form.html" class="btn btn-secondary" style="justify-content: flex-start;">
+                  <span>💼</span>
+                  <span>Post New Job Requirement</span>
+                </a>
+                <a href="applications.html" class="btn btn-secondary" style="justify-content: flex-start;">
+                  <span>🔍</span>
+                  <span>Verify Candidate Eligibility</span>
+                </a>
+                <a href="placement-process.html" class="btn btn-secondary" style="justify-content: flex-start;">
+                  <span>🎖️</span>
+                  <span>Record Selection & Issue Offer</span>
+                </a>
+                <a href="reports.html" class="btn btn-secondary" style="justify-content: flex-start;">
+                  <span>📊</span>
+                  <span>Generate Management Summary</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Recent Placement Milestones -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">Recent Placements</h2>
+              </div>
+              <div class="card-body" style="padding: 16px;">
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px;">
+                    <div>
+                      <div style="font-weight: 600; font-size: 0.9rem;">Rutuja Salunkhe</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Persistent &bull; Data Analyst</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <span class="badge badge-placed">Placed 6.5 LPA</span>
+                      <div style="font-size: 0.7rem; color: #94a3b8; margin-top: 2px;">Joined 25-Oct</div>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px;">
+                    <div>
+                      <div style="font-weight: 600; font-size: 0.9rem;">Komal Gaikwad</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Infosys &bull; Java Specialist</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <span class="badge badge-placed">Placed 5.4 LPA</span>
+                      <div style="font-size: 0.7rem; color: #94a3b8; margin-top: 2px;">Joined 22-Oct</div>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                      <div style="font-weight: 600; font-size: 0.9rem;">Vishal Khot</div>
+                      <div style="font-size: 0.75rem; color: #64748b;">Wipro &bull; Associate Software Engg</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <span class="badge badge-placed">Placed 4.8 LPA</span>
+                      <div style="font-size: 0.7rem; color: #94a3b8; margin-top: 2px;">Joined 18-Oct</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+candidate_id,candidate_code,full_name,email,mobile,qualification,college,university,passing_year,percentage,backlog_count,primary_technology,secondary_skills,current_location,preferred_location,profile_status,placement_status
+1,CAN-2026-0001,Rahul Patil,rahul.patil01@example.com,9000000001,BE,ABC College Pune,SPPU,2025,68.5,0,Java,,Pune,Pune,ACTIVE,NOT_PLACED
+2,CAN-2026-0002,Sneha More,sneha.more02@example.com,9000000002,BTech,Modern College,SPPU,2025,74.2,0,Python,,Pune,Bengaluru,ACTIVE,NOT_PLACED
+3,CAN-2026-0003,Amit Shinde,amit.shinde03@example.com,9000000003,MCA,MIT College,SPPU,2024,71.0,0,Java,,Pune,Pune,ACTIVE,NOT_PLACED
+4,CAN-2026-0004,Neha Jadhav,neha.jadhav04@example.com,9000000004,BE,DY Patil College,SPPU,2025,82.4,0,Python,,Pimpri,Pune,ACTIVE,NOT_PLACED
+5,CAN-2026-0005,Rohit Pawar,rohit.pawar05@example.com,9000000005,BTech,PCCOE,SPPU,2025,59.5,1,Java,,Pimpri,Pune,ACTIVE,NOT_PLACED
+6,CAN-2026-0006,Priya Desai,priya.desai06@example.com,9000000006,MCA,Fergusson College,SPPU,2024,76.1,0,Python,,Pune,Hyderabad,ACTIVE,NOT_PLACED
+7,CAN-2026-0007,Akash Kale,akash.kale07@example.com,9000000007,BE,Sinhgad College,SPPU,2025,64.8,0,Testing,,Pune,Pune,ACTIVE,NOT_PLACED
+8,CAN-2026-0008,Pooja Mali,pooja.mali08@example.com,9000000008,BCA,Indira College,SPPU,2025,72.6,0,Data Analytics,,Pune,Mumbai,ACTIVE,NOT_PLACED
+9,CAN-2026-0010,Komal Gaikwad,komal.gaikwad10@example.com,9000000010,BE,AISSMS Pune,SPPU,2025,78.9,0,Java,,Pune,Bengaluru,ACTIVE,PLACED
+10,CAN-2026-0014,Rutuja Salunkhe,rutuja.salunkhe14@example.com,9000000014,BTech,PCCOE,SPPU,2025,85.0,0,Data Analytics,,Pimpri,Pune,ACTIVE,PLACED
+11,CAN-2026-0011,Tanmay Deshmukh,tanmay.deshmukh26@example.com,9822001122,BE,MIT World Peace University,SPPU,2025,72.5,0,Java,,Pune,Pune,ACTIVE,NOT_PLACED
+12,CAN-2026-0012,Tanmay Deshmukh 175,tanmay.deshmukh1793387175@example.com,9822387175,BE,MIT World Peace University,SPPU,2025,72.5,0,Java,,Pune,Pune,ACTIVE,PLACED
+13,CAN-2026-0013,Tanmay Deshmukh 0,tanmay.deshmukh1793426000@example.com,9822426000,BE,MIT World Peace University,SPPU,2025,72.5,0,Java,,Pune,Pune,ACTIVE,PLACED
